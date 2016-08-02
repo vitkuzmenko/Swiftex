@@ -8,8 +8,18 @@
 
 import Foundation
 
-public func removeNilValuesFromDictionary(dictionary: [String: String?]) -> [String: String] {
+public func removeNilValuesFromStringDictionary(dictionary: [String: String?]) -> [String: String] {
     var cleanDictionary = [String: String]()
+    for item in dictionary {
+        if let value = item.1 {
+            cleanDictionary[item.0] = value
+        }
+    }
+    return cleanDictionary
+}
+
+public func removeNilValuesFromDictionary<T: AnyObject>(dictionary: [String: T?]) -> [String: T] {
+    var cleanDictionary = [String: T]()
     for item in dictionary {
         if let value = item.1 {
             cleanDictionary[item.0] = value
