@@ -62,13 +62,13 @@ extension Array where Element : Equatable {
     
 }
 
-protocol IdentifierHolder {
+public protocol IdentifierHolder {
     var id: NSNumber { get set }
 }
 
 extension Array where Element : IdentifierHolder {
     
-    func idArray() -> [NSNumber] {
+    public func idArray() -> [NSNumber] {
         var ids = [NSNumber]()
         for item in self {
             ids.append(item.id)
@@ -76,7 +76,7 @@ extension Array where Element : IdentifierHolder {
         return ids
     }
     
-    func idArrayAsString() -> [String] {
+    public func idArrayAsString() -> [String] {
         var ids = [String]()
         for item in self {
             ids.append(item.id.stringValue)
