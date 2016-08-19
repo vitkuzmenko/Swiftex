@@ -51,7 +51,8 @@ extension NSDate {
         return selfComps.month == dateComps.month && dateComps.year == selfComps.year
     }
     
-    public func isSameDayToDate(date: NSDate) -> Bool {
+    public func isSameDayToDate(date: NSDate?) -> Bool {
+        guard let date = date else { return false }
         let selfComps = NSCalendar.currentCalendar().components([.Year, .Month, .Day], fromDate: self)
         let dateComps = NSCalendar.currentCalendar().components([.Year, .Month, .Day], fromDate: date)
         return selfComps.month == dateComps.month && selfComps.year == dateComps.year && selfComps.day == dateComps.day
