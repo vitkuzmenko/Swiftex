@@ -27,12 +27,12 @@ extension Array where Element : Equatable {
     }
     
     // Remove first collection element that is equal to the given `object`:
-    mutating public func removeObject(object : Generator.Element) -> Bool {
+    mutating public func removeObject(object : Generator.Element) -> Int? {
         if let index = self.indexOf(object) {
             self.removeAtIndex(index)
-            return true
+            return index
         }
-        return false
+        return nil
     }
     
     public func hasObject(object : Generator.Element) -> Bool {
