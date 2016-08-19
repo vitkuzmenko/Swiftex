@@ -10,7 +10,7 @@ import Foundation
 
 extension NSLocale {
     
-    class var UTCTimeOffset: Int {
+    class public var UTCTimeOffset: Int {
         return NSTimeZone.localTimeZone().secondsFromGMT / 60
     }
     
