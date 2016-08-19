@@ -26,6 +26,15 @@ extension Array {
         }
     }
     
+    public func hasObject(@noescape predicate: (Generator.Element) throws -> Bool) -> Bool {
+        do {
+            let index = try self.indexOf(predicate)
+            return index != nil
+        } catch _ {
+            return false
+        }
+    }
+    
 }
 
 
@@ -66,15 +75,6 @@ extension Array where Element : Equatable {
     
     public func hasObject(object : Generator.Element) -> Bool {
         return self.indexOf(object) != nil
-    }
-    
-    public func hasObject(@noescape predicate: (Generator.Element) throws -> Bool) -> Bool {
-        do {
-            let index = try self.indexOf(predicate)
-            return index != nil
-        } catch _ {
-            return false
-        }
     }
     
     public func removeDuplicates() -> [Element] {
