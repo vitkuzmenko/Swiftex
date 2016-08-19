@@ -57,6 +57,21 @@ extension NSDate {
         return selfComps.month == dateComps.month && selfComps.year == dateComps.year && selfComps.day == dateComps.day
     }
     
+    public class func dateFromDateComponents(components: NSDateComponents) -> NSDate? {
+        let calendar = NSCalendar.currentCalendar()
+        calendar.timeZone = NSTimeZone(abbreviation: "MSK")!
+        calendar.locale = NSLocale.currentLocale()
+        return calendar.dateFromComponents(components)
+    }
+    
+    public class func dateWithDate(date: NSDate, hour: Int) -> NSDate? {
+        let calendar = NSCalendar.currentCalendar()
+        let dateComponents = calendar.components([.Year, .Month, .Day], fromDate: date)
+        dateComponents.hour = hour
+        dateComponents.minute = 0
+        return NSDate.dateFromDateComponents(dateComponents)
+    }
+    
 }
 
 extension NSDate {
