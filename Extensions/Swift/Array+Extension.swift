@@ -10,6 +10,22 @@ import Foundation
 
 extension Array where Element : Equatable {
     
+    public var second: Element? {
+        if count >= 2 {
+            return self[1]
+        } else {
+            return nil
+        }
+    }
+    
+    public var third: Element? {
+        if count >= 3 {
+            return self[2]
+        } else {
+            return nil
+        }
+    }
+    
     mutating public func addObject(object: Generator.Element, atStart: Bool = false) {
         removeObject(object)
         if atStart {

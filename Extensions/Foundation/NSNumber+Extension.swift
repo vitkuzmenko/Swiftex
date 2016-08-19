@@ -60,6 +60,10 @@ extension NSNumber {
         let string = wordFormat(formats)
         return String(format: format, integerValue, string)
     }
+    
+    public var roundDoubleValue: Double {
+        return floor(100 * doubleValue) / 100
+    }
 
 }
 

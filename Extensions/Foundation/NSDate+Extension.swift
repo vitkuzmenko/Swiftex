@@ -59,3 +59,55 @@ extension NSDate {
     
 }
 
+extension NSDate {
+    
+    public var currentCalendar: NSCalendar {
+        return NSCalendar.currentCalendar()
+    }
+    
+    public var calendarComponents: NSCalendarUnit {
+        return (NSCalendarUnit.Second.union(NSCalendarUnit.Minute).union(NSCalendarUnit.Hour).union(NSCalendarUnit.Day).union(NSCalendarUnit.Weekday).union(NSCalendarUnit.WeekOfMonth).union(NSCalendarUnit.Month).union(NSCalendarUnit.Year))
+    }
+    
+    public var components: NSDateComponents {
+        return currentCalendar.components(calendarComponents, fromDate: self)
+    }
+    
+    public var seconds: Int {
+        return components.second
+    }
+    
+    public var minutes: Int {
+        return components.minute
+    }
+    
+    public var hours: Int {
+        return components.hour
+    }
+    
+    public var day: Int {
+        return components.day
+    }
+    
+    public var month: Int {
+        return components.month
+    }
+    
+    public var year: Int {
+        return components.year
+    }
+    
+    public var minYear: Int {
+        return components.year % 100
+    }
+    
+    public var time: String {
+        return String(format: "%02d:%02d", hours, minutes)
+    }
+
+    public var isToday: Bool {
+        return self.isSameDayToDate(NSDate())
+    }
+    
+}
+

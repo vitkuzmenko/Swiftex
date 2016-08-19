@@ -27,6 +27,7 @@
 		791D9CF81D4F342700C9D7C2 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CEA1D4F342700C9D7C2 /* UIImage+Extension.swift */; };
 		791D9CFA1D4F390200C9D7C2 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */; };
 		79396DE11D673A0500690CFC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE01D673A0500690CFC /* UIViewController+Extension.swift */; };
+		79396DE31D673DDF00690CFC /* Range+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE21D673DDF00690CFC /* Range+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		791D9CEA1D4F342700C9D7C2 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		79396DE01D673A0500690CFC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		79396DE21D673DDF00690CFC /* Range+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				791D9CE41D4F342700C9D7C2 /* Number+Extension.swift */,
 				791D9CE51D4F342700C9D7C2 /* String+Extension.swift */,
 				791D9CE71D4F342700C9D7C2 /* Functions.swift */,
+				79396DE21D673DDF00690CFC /* Range+Extension.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				791D9CC81D4F33C900C9D7C2 /* AppDelegate.swift in Sources */,
 				791D9CF21D4F342700C9D7C2 /* Dictionary+Extension.swift in Sources */,
 				791D9CF31D4F342700C9D7C2 /* Number+Extension.swift in Sources */,
+				79396DE31D673DDF00690CFC /* Range+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

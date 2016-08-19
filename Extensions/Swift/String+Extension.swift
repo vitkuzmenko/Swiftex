@@ -73,6 +73,18 @@ extension String {
         return numbers.joinWithSeparator("")
     }
     
+    public var onlyLetters: String {
+        let set = NSCharacterSet.letterCharacterSet().invertedSet
+        let letters = self.componentsSeparatedByCharactersInSet(set)
+        return letters.joinWithSeparator("")
+    }
+    
+    public var onlyLettersWithSpace: String {
+        let set = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ").invertedSet
+        let letters = self.componentsSeparatedByCharactersInSet(set)
+        return letters.joinWithSeparator("")
+    }
+    
     public var dataValue: NSData {
         return self.dataUsingEncoding(NSUTF8StringEncoding)!
     }
@@ -182,6 +194,17 @@ extension String {
     
     public var length: Int {
         return self.characters.count
+    }
+    
+}
+
+public extension String {
+    
+    public func enumCase<T: RawRepresentable>() -> T? {
+        if let raw = self as? T.RawValue {
+            return T(rawValue: raw)
+        }
+        return nil
     }
     
 }
