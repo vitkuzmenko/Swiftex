@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     
-    func hexString(prefix: Bool = false) -> String {
+    public func hexString(prefix: Bool = false) -> String {
         let components = CGColorGetComponents(self.CGColor);
         let r = components[0];
         let g = components[1];

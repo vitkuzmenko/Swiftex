@@ -14,6 +14,5 @@ extension NSLocale {
         return NSTimeZone.localTimeZone().secondsFromGMT / 60
     }
     
-    
 }
 
