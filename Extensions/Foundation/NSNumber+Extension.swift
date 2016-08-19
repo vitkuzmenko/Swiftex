@@ -12,7 +12,11 @@ let kStringToNumberFormatter = NSNumberFormatter()
 
 extension NSNumber {
     
-    convenience public init(string value: String) {
+    convenience public init(string value: String?) {
+        guard let value = value else {
+            self.init(double: 0)
+            return
+        }
         let formatter = kStringToNumberFormatter
         formatter.numberStyle = .DecimalStyle
         
