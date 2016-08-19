@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImage {
         
-    func resizedImageWithSize(newSize: CGSize) -> UIImage {
+    public func resizedImageWithSize(newSize: CGSize) -> UIImage {
         let newRect = CGRectIntegral(CGRectMake(0, 0, newSize.width, newSize.height))
         var newImage: UIImage!
         
