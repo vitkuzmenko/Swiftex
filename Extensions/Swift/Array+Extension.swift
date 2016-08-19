@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array where Element : Equatable {
+extension Array {
     
     public var second: Element? {
         if count >= 2 {
@@ -24,6 +24,19 @@ extension Array where Element : Equatable {
         } else {
             return nil
         }
+    }
+    
+}
+
+
+extension Array where Element : Equatable {
+    
+    public func newObjectsFromArray(array: [Element]) -> [Element] {
+        var new = [Element]()
+        for object in array where !hasObject(object) {
+            new.append(object)
+        }
+        return new
     }
     
     mutating public func addObject(object: Generator.Element, atStart: Bool = false) {
