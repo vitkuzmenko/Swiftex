@@ -10,6 +10,14 @@ import Foundation
 
 extension NSObject {
     
+    public class var nameOfClass: String{
+        return NSStringFromClass(self).componentsSeparatedByString(".").last!
+    }
+    
+    public var nameOfClass: String{
+        return NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last!
+    }
+    
     public func addNotificationObServer(name: String, selector: Selector) {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: selector, name: name, object: nil)
     }
