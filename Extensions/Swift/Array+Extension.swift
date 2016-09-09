@@ -26,9 +26,9 @@ extension Array {
         }
     }
     
-    public func hasObject(@noescape predicate: (Generator.Element) throws -> Bool) -> Bool {
+    public func has(predicate: (Iterator.Element) throws -> Bool) -> Bool {
         do {
-            let index = try self.indexOf(predicate)
+            let index = try self.index(where: predicate)
             return index != nil
         } catch _ {
             return false
@@ -40,41 +40,41 @@ extension Array {
 
 extension Array where Element : Equatable {
     
-    public func newObjectsFromArray(array: [Element]) -> [Element] {
+    public func new(array: [Element]) -> [Element] {
         var new = [Element]()
-        for object in array where !hasObject(object) {
+        for object in array where !has(object) {
             new.append(object)
         }
         return new
     }
     
-    mutating public func addObject(object: Generator.Element, atStart: Bool = false) {
-        removeObject(object)
+    mutating public func add(object: Iterator.Element, atStart: Bool = false) {
+        _ = remove(object)
         if atStart {
-            insert(object, atIndex: 0)
+            insert(object, at: 0)
         } else {
             append(object)
         }
         
     }
     
-    mutating public func moveObjectFromPosition(fromPosition: Int, toPosition: Int) {
+    mutating public func move(fromPosition: Int, toPosition: Int) {
         let object = self[fromPosition]
-        removeAtIndex(fromPosition)
-        insert(object, atIndex: toPosition)
+        remove(at: fromPosition)
+        insert(object, at: toPosition)
     }
     
     // Remove first collection element that is equal to the given `object`:
-    mutating public func removeObject(object : Generator.Element) -> Int? {
-        if let index = self.indexOf(object) {
-            self.removeAtIndex(index)
+    mutating public func remove(_ object: Iterator.Element) -> Int? {
+        if let index = self.index(of: object) {
+            self.remove(at: index)
             return index
         }
         return nil
     }
     
-    public func hasObject(object : Generator.Element) -> Bool {
-        return self.indexOf(object) != nil
+    public func has(_ object : Iterator.Element) -> Bool {
+        return self.index(of: object) != nil
     }
     
     public func removeDuplicates() -> [Element] {
@@ -97,7 +97,7 @@ public protocol IdentifierHolder {
 
 extension Array where Element : IdentifierHolder {
     
-    public func idArray() -> [NSNumber] {
+    public var ids: [NSNumber] {
         var ids = [NSNumber]()
         for item in self {
             ids.append(item.id)
@@ -105,7 +105,7 @@ extension Array where Element : IdentifierHolder {
         return ids
     }
     
-    public func idArrayAsString() -> [String] {
+    public var idsString: [String] {
         var ids = [String]()
         for item in self {
             ids.append(item.id.stringValue)

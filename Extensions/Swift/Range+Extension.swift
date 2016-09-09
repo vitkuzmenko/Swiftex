@@ -9,9 +9,11 @@
 import Foundation
 
 extension NSRange {
+    
     func toRange(string: String) -> Range<String.Index> {
-        let startIndex = string.startIndex.advancedBy(location)
-        let endIndex = startIndex.advancedBy(length)
+        let startIndex = string.characters.index(string.startIndex, offsetBy: location)
+        let endIndex = string.characters.index(startIndex, offsetBy: length)
         return startIndex..<endIndex
     }
+    
 }

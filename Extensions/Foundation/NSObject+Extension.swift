@@ -10,24 +10,24 @@ import Foundation
 
 extension NSObject {
     
-    public class var nameOfClass: String{
-        return NSStringFromClass(self).componentsSeparatedByString(".").last!
+    public class var nameOfClass: String {
+        return NSStringFromClass(self).components(separatedBy: ".").last!
     }
     
-    public var nameOfClass: String{
-        return NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last!
+    public var nameOfClass: String {
+        return NSStringFromClass(type(of: self)).components(separatedBy: ".").last!
     }
     
-    public func addNotificationObServer(name: String, selector: Selector) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: selector, name: name, object: nil)
+    public func addNotificationObServer(name: Notification.Name, selector: Selector) {
+        NotificationCenter.default.addObserver(self, selector: selector, name: name, object: nil)
     }
     
-    public func removeNotificationObServer(name: String) {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: name, object: nil)
+    public func removeNotificationObServer(name: Notification.Name) {
+        NotificationCenter.default.removeObserver(self, name: name, object: nil)
     }
     
     public func removeNotificationObserver() {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
 }

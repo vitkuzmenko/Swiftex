@@ -17,82 +17,86 @@ extension UIViewController {
     // MARK: - Notifications
     
     public func addKeyboardWillShowNotification() {
-        self.addNotificationObServer(UIKeyboardWillShowNotification, selector: #selector(UIViewController.keyboardWillShowNotification(_:)));
+        self.addNotificationObServer(name: .UIKeyboardWillShow, selector: #selector(UIViewController.keyboardWillShow(notification:)));
     }
     
     public func addKeyboardDidShowNotification() {
-        self.addNotificationObServer(UIKeyboardDidShowNotification, selector: #selector(UIViewController.keyboardDidShowNotification(_:)));
+        self.addNotificationObServer(name: .UIKeyboardDidShow, selector: #selector(UIViewController.keyboardDidShow(notification:)));
     }
     
     public func addKeyboardWillHideNotification() {
-        self.addNotificationObServer(UIKeyboardWillHideNotification, selector: #selector(UIViewController.keyboardWillHideNotification(_:)));
+        self.addNotificationObServer(name: .UIKeyboardWillHide, selector: #selector(UIViewController.keyboardWillHide(notification:)));
     }
     
     public func addKeyboardDidHideNotification() {
-        self.addNotificationObServer(UIKeyboardDidHideNotification, selector: #selector(UIViewController.keyboardDidHideNotification(_:)));
+        self.addNotificationObServer(name: .UIKeyboardDidHide, selector: #selector(UIViewController.keyboardDidHide(notification:)));
     }
     
     public func removeKeyboardWillShowNotification() {
-        self.removeNotificationObServer(UIKeyboardWillShowNotification);
+        self.removeNotificationObServer(name: .UIKeyboardWillShow);
     }
     
     public func removeKeyboardDidShowNotification() {
-        self.removeNotificationObServer(UIKeyboardDidShowNotification);
+        self.removeNotificationObServer(name: .UIKeyboardDidShow);
     }
     
     public func removeKeyboardWillHideNotification() {
-        self.removeNotificationObServer(UIKeyboardWillHideNotification);
+        self.removeNotificationObServer(name: .UIKeyboardWillHide);
     }
     
     public func removeKeyboardDidHideNotification() {
-        self.removeNotificationObServer(UIKeyboardDidHideNotification);
+        self.removeNotificationObServer(name: .UIKeyboardDidHide);
     }
     
-    public func keyboardDidShowNotification(notification: NSNotification) {
-        let nInfo = notification.userInfo as! [String: NSValue]
+    public func keyboardDidShow(notification: Notification) {
+        let nInfo = (notification as NSNotification).userInfo as! [String: NSValue]
         let value = nInfo[UIKeyboardFrameEndUserInfoKey]
-        let frame = value?.CGRectValue()
         
-        keyboardDidShowWithFrame(frame!)
+        if let frame = value?.cgRectValue {
+            keyboardDidShow(frame: frame)
+        }
     }
     
-    public func keyboardWillShowNotification(notification: NSNotification) {
-        let nInfo = notification.userInfo as! [String: NSValue]
+    public func keyboardWillShow(notification: Notification) {
+        let nInfo = (notification as NSNotification).userInfo as! [String: NSValue]
         let value = nInfo[UIKeyboardFrameEndUserInfoKey]
-        let frame = value?.CGRectValue()
         
-        keyboardWillShowWithFrame(frame!)
+        if let frame = value?.cgRectValue {
+            keyboardWillShow(frame: frame)
+        }
     }
     
-    public func keyboardWillHideNotification(notification: NSNotification) {
-        let nInfo = notification.userInfo as! [String: NSValue]
+    public func keyboardWillHide(notification: Notification) {
+        let nInfo = (notification as NSNotification).userInfo as! [String: NSValue]
         let value = nInfo[UIKeyboardFrameEndUserInfoKey]
-        let frame = value?.CGRectValue()
         
-        keyboardWillHideWithFrame(frame!)
+        if let frame = value?.cgRectValue {
+            keyboardWillHide(frame: frame)
+        }
     }
     
-    public func keyboardDidHideNotification(notification: NSNotification) {
-        let nInfo = notification.userInfo as! [String: NSValue]
+    public func keyboardDidHide(notification: Notification) {
+        let nInfo = (notification as NSNotification).userInfo as! [String: NSValue]
         let value = nInfo[UIKeyboardFrameEndUserInfoKey]
-        let frame = value?.CGRectValue()
         
-        keyboardDidHideWithFrame(frame!)
+        if let frame = value?.cgRectValue {
+            keyboardDidHide(frame: frame)
+        }
     }
     
-    public func keyboardWillShowWithFrame(frame: CGRect) {
-        
-    }
-    
-    public func keyboardDidShowWithFrame(frame: CGRect) {
+    public func keyboardWillShow(frame: CGRect) {
         
     }
     
-    public func keyboardWillHideWithFrame(frame: CGRect) {
+    public func keyboardDidShow(frame: CGRect) {
         
     }
     
-    public func keyboardDidHideWithFrame(frame: CGRect) {
+    public func keyboardWillHide(frame: CGRect) {
+        
+    }
+    
+    public func keyboardDidHide(frame: CGRect) {
         
     }
     

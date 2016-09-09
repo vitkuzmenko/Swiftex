@@ -8,13 +8,13 @@
 
 import Foundation
 
-extension NSData {
+extension Data {
     
     /// Recive string from APNS device token
     public var deviceTokenString: String {
-        let charSet = NSCharacterSet(charactersInString: "<>")
-        let string = self.description.stringByTrimmingCharactersInSet(charSet)
-        return string.stringByReplacingOccurrencesOfString(" ", withString: "")
+        let charSet = CharacterSet(charactersIn: "<>")
+        let string = self.description.trimmingCharacters(in: charSet)
+        return string.replacingOccurrences(of: " ", with: "")
     }
     
 }

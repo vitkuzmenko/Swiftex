@@ -10,14 +10,14 @@ import CoreGraphics
 
 extension CGSize {
  
-    public func aspectRatioForWidth(newWidth: CGFloat) -> CGSize {
+    public func aspectRatio(newWidth: CGFloat) -> CGSize {
         let newHeight = height * newWidth / width
-        return CGSizeMake(ceil(newWidth), ceil(newHeight))
+        return CGSize(width: ceil(newWidth), height: ceil(newHeight))
     }
     
-    public func aspectRatioForHeight(newHeight: CGFloat) -> CGSize {
+    public func aspectRatio(newHeight: CGFloat) -> CGSize {
         let newWidth = width * newHeight / height
-        return CGSizeMake(ceil(newWidth), ceil(newHeight))
+        return CGSize(width: ceil(newWidth), height: ceil(newHeight))
     }
     
 }
