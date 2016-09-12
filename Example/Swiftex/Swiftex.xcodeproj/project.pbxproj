@@ -28,6 +28,7 @@
 		791D9CFA1D4F390200C9D7C2 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */; };
 		79396DE11D673A0500690CFC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE01D673A0500690CFC /* UIViewController+Extension.swift */; };
 		79396DE31D673DDF00690CFC /* Range+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE21D673DDF00690CFC /* Range+Extension.swift */; };
+		79F5155D1D867AF90079C42E /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F5155C1D867AF90079C42E /* UIWindow+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		79396DE01D673A0500690CFC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		79396DE21D673DDF00690CFC /* Range+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Extension.swift"; sourceTree = "<group>"; };
+		79F5155C1D867AF90079C42E /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				791D9CE91D4F342700C9D7C2 /* UIColor+Extension.swift */,
 				791D9CEA1D4F342700C9D7C2 /* UIImage+Extension.swift */,
 				79396DE01D673A0500690CFC /* UIViewController+Extension.swift */,
+				79F5155C1D867AF90079C42E /* UIWindow+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				791D9CFA1D4F390200C9D7C2 /* CGSize+Extension.swift in Sources */,
 				791D9CEF1D4F342700C9D7C2 /* NSNumber+Extension.swift in Sources */,
 				79396DE11D673A0500690CFC /* UIViewController+Extension.swift in Sources */,
+				79F5155D1D867AF90079C42E /* UIWindow+Extension.swift in Sources */,
 				791D9CF11D4F342700C9D7C2 /* Array+Extension.swift in Sources */,
 				791D9CF61D4F342700C9D7C2 /* Functions.swift in Sources */,
 				791D9CF41D4F342700C9D7C2 /* String+Extension.swift in Sources */,
