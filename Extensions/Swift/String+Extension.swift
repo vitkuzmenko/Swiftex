@@ -102,9 +102,9 @@ extension String {
         let encodedString = self
         
         let encodedData = encodedString.data(using: String.Encoding.utf8)!
-        let attributedOptions : [String: AnyObject] = [
-            NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType as AnyObject,
-            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8 as AnyObject
+        let attributedOptions : [String: Any] = [
+            NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType as Any,
+            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8 as Any
         ]
         
         do {
@@ -223,7 +223,7 @@ extension String {
         return size(font: font).width
     }
     
-    public func height(width: CGFloat, withFont font: AnyObject) -> CGFloat {
+    public func height(width: CGFloat, withFont font: Any) -> CGFloat {
         
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         

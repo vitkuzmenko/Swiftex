@@ -18,7 +18,7 @@ public func removeNilValuesFromString(dictionary: [String: String?]) -> [String:
     return cleanDictionary
 }
 
-public func removeNilValues<T: AnyObject>(dictionary: [String: T?]) -> [String: T] {
+public func removeNilValues<T: Any>(dictionary: [String: T?]) -> [String: T] {
     var cleanDictionary = [String: T]()
     for item in dictionary {
         if let value = item.1 {
