@@ -11,7 +11,7 @@ import Foundation
 extension Data {
     
     /// Recive string from APNS device token
-    public var deviceTokenString: String {
+    public var deviceTokenAsString: String {
         let charSet = CharacterSet(charactersIn: "<>")
         let string = self.description.trimmingCharacters(in: charSet)
         return string.replacingOccurrences(of: " ", with: "")
