@@ -7,11 +7,10 @@
 
 import UIKit
 
-extension NSNotificationCenter {
+extension NotificationCenter {
 
-    public class func postNotificationName(name: String, object: AnyObject? = nil, userInfo: [NSObject : AnyObject]? = nil) {
-        let nc = defaultCenter()
-        nc.postNotificationName(name, object: object, userInfo: userInfo)
+    public class func post(name: Notification.Name, object: Any? = nil, userInfo: [AnyHashable: Any]? = nil) {
+        self.default.post(name: name, object: object, userInfo: userInfo)
     }
 
 }

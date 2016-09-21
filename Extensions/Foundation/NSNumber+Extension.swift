@@ -8,17 +8,17 @@
 
 import Foundation
 
-let kStringToNumberFormatter = NSNumberFormatter()
+let kStringToNumberFormatter = NumberFormatter()
 
 extension NSNumber {
     
     convenience public init(string value: String?) {
         guard let value = value else {
-            self.init(double: 0)
+            self.init(value: 0 as Double)
             return
         }
         let formatter = kStringToNumberFormatter
-        formatter.numberStyle = .DecimalStyle
+        formatter.numberStyle = .decimal
         
         var separator = "."
         
@@ -29,31 +29,31 @@ extension NSNumber {
         var safeValue = value
         
         if separator == "," {
-            safeValue = value.stringByReplacingOccurrencesOfString(".", withString: ",", options: [], range: nil)
+            safeValue = value.replacingOccurrences(of: ".", with: ",", options: [], range: nil)
         } else {
-            safeValue = value.stringByReplacingOccurrencesOfString(",", withString: ".", options: [], range: nil)
+            safeValue = value.replacingOccurrences(of: ",", with: ".", options: [], range: nil)
         }
         
         if safeValue.isEmpty {
             safeValue = "0"
         }
         
-        let number = formatter.numberFromString(safeValue)
+        let number = formatter.number(from: safeValue)
         if let double = number?.doubleValue {
-            self.init(double: double)
+            self.init(value: double as Double)
         } else {
-            self.init(double: 0)
+            self.init(value: 0 as Double)
         }
     }
     
     public func wordFormat(titles: [String]) -> String {
         let cases = [2, 0, 1, 1, 1, 2];
         
-        let x = integerValue % 100
+        let x = intValue % 100
         if x > 4 && x < 20 {
             return titles[2]
         } else {
-            let y = integerValue % 10
+            let y = intValue % 10
             let minimum = min(y, 5)
             let c = cases[minimum]
             return titles[c]
@@ -61,8 +61,8 @@ extension NSNumber {
     }
     
     public func stringWithWordFormats(formats: [String], format: String) -> String {
-        let string = wordFormat(formats)
-        return String(format: format, integerValue, string)
+        let string = wordFormat(titles: formats)
+        return String(format: format, intValue, string)
     }
     
     public var roundDoubleValue: Double {
@@ -70,46 +70,3 @@ extension NSNumber {
     }
 
 }
-
-//Infixes
-
-public func + (left: NSNumber, right: NSNumber) -> NSNumber {
-    return left.doubleValue + right.doubleValue
-}
-
-public func - (left: NSNumber, right: NSNumber) -> NSNumber {
-    return left.doubleValue - right.doubleValue
-}
-
-public func += (inout left: NSNumber, right: NSNumber) {
-    left = left.doubleValue + right.doubleValue
-}
-
-public func -= (inout left: NSNumber, right: NSNumber) {
-    left = left.doubleValue - right.doubleValue
-}
-
-public func * (inout left: NSNumber, right: NSNumber) {
-    left = left.doubleValue * right.doubleValue
-}
-
-public func / (inout left: NSNumber, right: NSNumber) {
-    left = left.doubleValue / right.doubleValue
-}
-
-public func > (left: NSNumber, right: NSNumber) -> Bool {
-    return left.doubleValue > right.doubleValue
-}
-
-public func < (left: NSNumber, right: NSNumber) -> Bool {
-    return left.doubleValue < right.doubleValue
-}
-
-public func <= (left: NSNumber, right: NSNumber) -> Bool {
-    return left.doubleValue <= right.doubleValue
-}
-
-public func >= (left: NSNumber, right: NSNumber) -> Bool {
-    return left.doubleValue >= right.doubleValue
-}
-
