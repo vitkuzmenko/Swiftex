@@ -1,5 +1,5 @@
 # Swiftex
-Swift function extensions
+Swift function extensions for Swift 3
 
 #Installation
 
