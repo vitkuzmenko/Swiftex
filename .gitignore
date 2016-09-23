@@ -26,3 +26,5 @@ tmtags
 
 *.DS_Store
 .DS_Store
+Example/.DS_Store
+Example/Swiftex/.DS_Store
