@@ -32,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		790980B21D9B9B50003E3D3D /* Swiftex.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Swiftex.podspec; path = ../../Swiftex.podspec; sourceTree = "<group>"; };
 		791D9CC41D4F33C900C9D7C2 /* Swiftex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		791D9CC71D4F33C900C9D7C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		791D9CC91D4F33C900C9D7C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		791D9CBB1D4F33C900C9D7C2 = {
 			isa = PBXGroup;
 			children = (
+				790980B21D9B9B50003E3D3D /* Swiftex.podspec */,
 				791D9CC61D4F33C900C9D7C2 /* Swiftex */,
 				791D9CD91D4F342600C9D7C2 /* Extensions */,
 				791D9CC51D4F33C900C9D7C2 /* Products */,
