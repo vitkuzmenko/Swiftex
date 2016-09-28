@@ -16,12 +16,6 @@ extension String {
         return String(format: "%@", self.trimmingCharacters(in: charSet))
     }
     
-    public func contains(_ string: String) -> Bool {
-        let innerLowercase = string.lowercased()
-        let selfLowercase = self.lowercased()
-        return (selfLowercase.range(of: innerLowercase) != nil)
-    }
-    
     public var isEmail: Bool {
         let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regEx)
@@ -168,6 +162,10 @@ extension String {
         } else {
             return self
         }
+    }
+    
+    public var notificaitonName: NSNotification.Name {
+        return NSNotification.Name(rawValue: self)
     }
     
 }
