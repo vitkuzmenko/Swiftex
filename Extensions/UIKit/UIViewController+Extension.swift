@@ -10,45 +10,45 @@ import UIKit
 
 extension UIViewController {
     
-    public var navigationBar: UINavigationBar? {
+    open var navigationBar: UINavigationBar? {
         return navigationController?.navigationBar
     }
     
     // MARK: - Notifications
     
-    public func addKeyboardWillShowNotification() {
-        self.addNotificationObServer(name: .UIKeyboardWillShow, selector: #selector(UIViewController.keyboardWillShow(notification:)));
+    open func addKeyboardWillShowNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
     }
     
-    public func addKeyboardDidShowNotification() {
-        self.addNotificationObServer(name: .UIKeyboardDidShow, selector: #selector(UIViewController.keyboardDidShow(notification:)));
+    open func addKeyboardDidShowNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
     }
     
-    public func addKeyboardWillHideNotification() {
-        self.addNotificationObServer(name: .UIKeyboardWillHide, selector: #selector(UIViewController.keyboardWillHide(notification:)));
+    open func addKeyboardWillHideNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
     }
     
-    public func addKeyboardDidHideNotification() {
-        self.addNotificationObServer(name: .UIKeyboardDidHide, selector: #selector(UIViewController.keyboardDidHide(notification:)));
+    open func addKeyboardDidHideNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardDidHide(notification:)), name: .UIKeyboardDidHide, object: nil)
     }
     
-    public func removeKeyboardWillShowNotification() {
-        self.removeNotificationObServer(name: .UIKeyboardWillShow);
+    open func removeKeyboardWillShowNotification() {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
     }
     
-    public func removeKeyboardDidShowNotification() {
-        self.removeNotificationObServer(name: .UIKeyboardDidShow);
+    open func removeKeyboardDidShowNotification() {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardDidShow, object: nil)
     }
     
-    public func removeKeyboardWillHideNotification() {
-        self.removeNotificationObServer(name: .UIKeyboardWillHide);
+    open func removeKeyboardWillHideNotification() {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
-    public func removeKeyboardDidHideNotification() {
-        self.removeNotificationObServer(name: .UIKeyboardDidHide);
+    open func removeKeyboardDidHideNotification() {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardDidHide, object: nil)
     }
     
-    public func keyboardDidShow(notification: Notification) {
+    open func keyboardDidShow(notification: Notification) {
         let nInfo = (notification as NSNotification).userInfo as! [String: NSValue]
         let value = nInfo[UIKeyboardFrameEndUserInfoKey]
         
@@ -57,7 +57,7 @@ extension UIViewController {
         }
     }
     
-    public func keyboardWillShow(notification: Notification) {
+    open func keyboardWillShow(notification: Notification) {
         let nInfo = (notification as NSNotification).userInfo as! [String: NSValue]
         let value = nInfo[UIKeyboardFrameEndUserInfoKey]
         
@@ -66,7 +66,7 @@ extension UIViewController {
         }
     }
     
-    public func keyboardWillHide(notification: Notification) {
+    open func keyboardWillHide(notification: Notification) {
         let nInfo = (notification as NSNotification).userInfo as! [String: NSValue]
         let value = nInfo[UIKeyboardFrameEndUserInfoKey]
         
@@ -75,7 +75,7 @@ extension UIViewController {
         }
     }
     
-    public func keyboardDidHide(notification: Notification) {
+    open func keyboardDidHide(notification: Notification) {
         let nInfo = (notification as NSNotification).userInfo as! [String: NSValue]
         let value = nInfo[UIKeyboardFrameEndUserInfoKey]
         
@@ -84,19 +84,19 @@ extension UIViewController {
         }
     }
     
-    public func keyboardWillShow(frame: CGRect) {
+    open func keyboardWillShow(frame: CGRect) {
         
     }
     
-    public func keyboardDidShow(frame: CGRect) {
+    open func keyboardDidShow(frame: CGRect) {
         
     }
     
-    public func keyboardWillHide(frame: CGRect) {
+    open func keyboardWillHide(frame: CGRect) {
         
     }
     
-    public func keyboardDidHide(frame: CGRect) {
+    open func keyboardDidHide(frame: CGRect) {
         
     }
     
