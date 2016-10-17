@@ -12,14 +12,13 @@
 		791D9CCD1D4F33C900C9D7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791D9CCB1D4F33C900C9D7C2 /* Main.storyboard */; };
 		791D9CCF1D4F33C900C9D7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 791D9CCE1D4F33C900C9D7C2 /* Assets.xcassets */; };
 		791D9CD21D4F33C900C9D7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791D9CD01D4F33C900C9D7C2 /* LaunchScreen.storyboard */; };
-		791D9CEB1D4F342700C9D7C2 /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDB1D4F342600C9D7C2 /* NSData+Extension.swift */; };
-		791D9CEC1D4F342700C9D7C2 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDC1D4F342600C9D7C2 /* NSDate+Extension.swift */; };
-		791D9CED1D4F342700C9D7C2 /* NSLocale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDD1D4F342600C9D7C2 /* NSLocale+Extension.swift */; };
-		791D9CEE1D4F342700C9D7C2 /* NSNotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDE1D4F342600C9D7C2 /* NSNotificationCenter+Extension.swift */; };
+		791D9CEB1D4F342700C9D7C2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDB1D4F342600C9D7C2 /* Data+Extension.swift */; };
+		791D9CEC1D4F342700C9D7C2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDC1D4F342600C9D7C2 /* Date+Extension.swift */; };
+		791D9CED1D4F342700C9D7C2 /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDD1D4F342600C9D7C2 /* Locale+Extension.swift */; };
+		791D9CEE1D4F342700C9D7C2 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDE1D4F342600C9D7C2 /* NotificationCenter+Extension.swift */; };
 		791D9CEF1D4F342700C9D7C2 /* NSNumber+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDF1D4F342600C9D7C2 /* NSNumber+Extension.swift */; };
 		791D9CF01D4F342700C9D7C2 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE01D4F342600C9D7C2 /* NSObject+Extension.swift */; };
 		791D9CF11D4F342700C9D7C2 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE21D4F342600C9D7C2 /* Array+Extension.swift */; };
-		791D9CF21D4F342700C9D7C2 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE31D4F342700C9D7C2 /* Dictionary+Extension.swift */; };
 		791D9CF31D4F342700C9D7C2 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE41D4F342700C9D7C2 /* Number+Extension.swift */; };
 		791D9CF41D4F342700C9D7C2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE51D4F342700C9D7C2 /* String+Extension.swift */; };
 		791D9CF61D4F342700C9D7C2 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE71D4F342700C9D7C2 /* Functions.swift */; };
@@ -32,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		790980B21D9B9B50003E3D3D /* Swiftex.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Swiftex.podspec; path = ../../Swiftex.podspec; sourceTree = "<group>"; };
 		791D9CC41D4F33C900C9D7C2 /* Swiftex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		791D9CC71D4F33C900C9D7C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		791D9CC91D4F33C900C9D7C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,14 +39,13 @@
 		791D9CCE1D4F33C900C9D7C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		791D9CD11D4F33C900C9D7C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		791D9CD31D4F33C900C9D7C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		791D9CDB1D4F342600C9D7C2 /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
-		791D9CDC1D4F342600C9D7C2 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
-		791D9CDD1D4F342600C9D7C2 /* NSLocale+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+Extension.swift"; sourceTree = "<group>"; };
-		791D9CDE1D4F342600C9D7C2 /* NSNotificationCenter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+Extension.swift"; sourceTree = "<group>"; };
+		791D9CDB1D4F342600C9D7C2 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		791D9CDC1D4F342600C9D7C2 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		791D9CDD1D4F342600C9D7C2 /* Locale+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
+		791D9CDE1D4F342600C9D7C2 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
 		791D9CDF1D4F342600C9D7C2 /* NSNumber+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+Extension.swift"; sourceTree = "<group>"; };
 		791D9CE01D4F342600C9D7C2 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		791D9CE21D4F342600C9D7C2 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		791D9CE31D4F342700C9D7C2 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		791D9CE41D4F342700C9D7C2 /* Number+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 		791D9CE51D4F342700C9D7C2 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		791D9CE71D4F342700C9D7C2 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		791D9CBB1D4F33C900C9D7C2 = {
 			isa = PBXGroup;
 			children = (
+				790980B21D9B9B50003E3D3D /* Swiftex.podspec */,
 				791D9CC61D4F33C900C9D7C2 /* Swiftex */,
 				79C72A711DAA2CAB006CA5F7 /* Swiftex.podspec */,
 				791D9CD91D4F342600C9D7C2 /* Extensions */,
@@ -115,10 +115,10 @@
 		791D9CDA1D4F342600C9D7C2 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				791D9CDB1D4F342600C9D7C2 /* NSData+Extension.swift */,
-				791D9CDC1D4F342600C9D7C2 /* NSDate+Extension.swift */,
-				791D9CDD1D4F342600C9D7C2 /* NSLocale+Extension.swift */,
-				791D9CDE1D4F342600C9D7C2 /* NSNotificationCenter+Extension.swift */,
+				791D9CDB1D4F342600C9D7C2 /* Data+Extension.swift */,
+				791D9CDC1D4F342600C9D7C2 /* Date+Extension.swift */,
+				791D9CDD1D4F342600C9D7C2 /* Locale+Extension.swift */,
+				791D9CDE1D4F342600C9D7C2 /* NotificationCenter+Extension.swift */,
 				791D9CDF1D4F342600C9D7C2 /* NSNumber+Extension.swift */,
 				791D9CE01D4F342600C9D7C2 /* NSObject+Extension.swift */,
 				791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */,
@@ -130,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				791D9CE21D4F342600C9D7C2 /* Array+Extension.swift */,
-				791D9CE31D4F342700C9D7C2 /* Dictionary+Extension.swift */,
 				791D9CE41D4F342700C9D7C2 /* Number+Extension.swift */,
 				791D9CE51D4F342700C9D7C2 /* String+Extension.swift */,
 				791D9CE71D4F342700C9D7C2 /* Functions.swift */,
@@ -177,7 +176,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = KuzmenkoFamily;
 				TargetAttributes = {
 					791D9CC31D4F33C900C9D7C2 = {
@@ -222,8 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				791D9CEC1D4F342700C9D7C2 /* NSDate+Extension.swift in Sources */,
-				791D9CEB1D4F342700C9D7C2 /* NSData+Extension.swift in Sources */,
+				791D9CEC1D4F342700C9D7C2 /* Date+Extension.swift in Sources */,
+				791D9CEB1D4F342700C9D7C2 /* Data+Extension.swift in Sources */,
 				791D9CFA1D4F390200C9D7C2 /* CGSize+Extension.swift in Sources */,
 				791D9CEF1D4F342700C9D7C2 /* NSNumber+Extension.swift in Sources */,
 				79396DE11D673A0500690CFC /* UIViewController+Extension.swift in Sources */,
@@ -234,11 +233,10 @@
 				791D9CF01D4F342700C9D7C2 /* NSObject+Extension.swift in Sources */,
 				791D9CCA1D4F33C900C9D7C2 /* ViewController.swift in Sources */,
 				791D9CF71D4F342700C9D7C2 /* UIColor+Extension.swift in Sources */,
-				791D9CED1D4F342700C9D7C2 /* NSLocale+Extension.swift in Sources */,
+				791D9CED1D4F342700C9D7C2 /* Locale+Extension.swift in Sources */,
 				791D9CF81D4F342700C9D7C2 /* UIImage+Extension.swift in Sources */,
-				791D9CEE1D4F342700C9D7C2 /* NSNotificationCenter+Extension.swift in Sources */,
+				791D9CEE1D4F342700C9D7C2 /* NotificationCenter+Extension.swift in Sources */,
 				791D9CC81D4F33C900C9D7C2 /* AppDelegate.swift in Sources */,
-				791D9CF21D4F342700C9D7C2 /* Dictionary+Extension.swift in Sources */,
 				791D9CF31D4F342700C9D7C2 /* Number+Extension.swift in Sources */,
 				79396DE31D673DDF00690CFC /* Range+Extension.swift in Sources */,
 			);
@@ -280,8 +278,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -326,8 +326,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -346,6 +348,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

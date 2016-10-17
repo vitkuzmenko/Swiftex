@@ -26,15 +26,6 @@ extension Array {
         }
     }
     
-    public func has(predicate: (Iterator.Element) throws -> Bool) -> Bool {
-        do {
-            let index = try self.index(where: predicate)
-            return index != nil
-        } catch _ {
-            return false
-        }
-    }
-    
 }
 
 
@@ -42,7 +33,7 @@ extension Array where Element : Equatable {
     
     public func new(array: [Element]) -> [Element] {
         var new = [Element]()
-        for object in array where !has(object) {
+        for object in array where !contains(object) {
             new.append(object)
         }
         return new
@@ -71,10 +62,6 @@ extension Array where Element : Equatable {
             return index
         }
         return nil
-    }
-    
-    public func has(_ object : Iterator.Element) -> Bool {
-        return self.index(of: object) != nil
     }
     
     public func removeDuplicates() -> [Element] {
