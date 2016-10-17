@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.9"
   s.summary      = "Swift extensions"
 
-  s.homepage     = "https://github.com/vitkuzmenko/Swiftex"
+  s.homepage     = "https://github.com/vitkuzmenko/Swiftex.git"
 
   s.license      = { :type => "Apache 2.0", :file => "LICENSE" }
 
