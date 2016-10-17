@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Swiftex"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "Swift extensions"
 
   s.homepage     = "https://github.com/vitkuzmenko/Swiftex"
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source       = { :git => "https://github.com/vitkuzmenko/Swiftex.git", :tag => s.version.to_s }
+  s.source       = { :git => s.homepage, :tag => s.version.to_s }
 
   s.source_files  = "Extensions/*/*.swift"
   
