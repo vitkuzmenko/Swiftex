@@ -56,6 +56,7 @@
 		791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		79396DE01D673A0500690CFC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		79396DE21D673DDF00690CFC /* Range+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Extension.swift"; sourceTree = "<group>"; };
+		79C72A711DAA2CAB006CA5F7 /* Swiftex.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Swiftex.podspec; path = ../../Swiftex.podspec; sourceTree = "<group>"; };
 		79F5155C1D867AF90079C42E /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +76,7 @@
 			children = (
 				790980B21D9B9B50003E3D3D /* Swiftex.podspec */,
 				791D9CC61D4F33C900C9D7C2 /* Swiftex */,
+				79C72A711DAA2CAB006CA5F7 /* Swiftex.podspec */,
 				791D9CD91D4F342600C9D7C2 /* Extensions */,
 				791D9CC51D4F33C900C9D7C2 /* Products */,
 			);
