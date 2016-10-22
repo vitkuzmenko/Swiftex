@@ -53,39 +53,23 @@ extension NSObject {
     }
     
     open func keyboardDidShow(notification: Notification) {
-        let nInfo = notification.userInfo as! [String: NSValue]
-        let value = nInfo[UIKeyboardFrameEndUserInfoKey]
-        
-        if let frame = value?.cgRectValue {
-            keyboardDidShow(frame: frame)
-        }
+        guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
+        keyboardDidShow(frame: value.cgRectValue)
     }
     
     open func keyboardWillShow(notification: Notification) {
-        let nInfo = notification.userInfo as! [String: NSValue]
-        let value = nInfo[UIKeyboardFrameEndUserInfoKey]
-        
-        if let frame = value?.cgRectValue {
-            keyboardWillShow(frame: frame)
-        }
+        guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
+        keyboardWillShow(frame: value.cgRectValue)
     }
     
     open func keyboardWillHide(notification: Notification) {
-        let nInfo = notification.userInfo as! [String: NSValue]
-        let value = nInfo[UIKeyboardFrameEndUserInfoKey]
-        
-        if let frame = value?.cgRectValue {
-            keyboardWillHide(frame: frame)
-        }
+        guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
+        keyboardWillHide(frame: value.cgRectValue)
     }
     
     open func keyboardDidHide(notification: Notification) {
-        let nInfo = notification.userInfo as! [String: NSValue]
-        let value = nInfo[UIKeyboardFrameEndUserInfoKey]
-        
-        if let frame = value?.cgRectValue {
-            keyboardDidHide(frame: frame)
-        }
+        guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
+        keyboardDidHide(frame: value.cgRectValue)
     }
     
     open func keyboardWillShow(frame: CGRect) {
