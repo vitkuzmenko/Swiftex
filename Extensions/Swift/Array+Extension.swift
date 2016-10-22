@@ -77,27 +77,3 @@ extension Array where Element : Equatable {
     }
     
 }
-
-public protocol IdentifierHolder {
-    var id: Int { get set }
-}
-
-extension Array where Element : IdentifierHolder {
-    
-    public var ids: [Int] {
-        var ids = [Int]()
-        for item in self {
-            ids.append(item.id)
-        }
-        return ids
-    }
-    
-    public var idsString: [String] {
-        var ids = [String]()
-        for item in self {
-            ids.append(item.id.toString)
-        }
-        return ids
-    }
-    
-}
