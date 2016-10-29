@@ -76,6 +76,16 @@ extension Array where Element : Equatable {
         return nil
     }
     
+    mutating public func replace(object: Element, ifMissingInsertAt index: Int?) {
+        if let currentIndex = self.remove(object) {
+            self.insert(object, at: currentIndex)
+        } else if let index = index {
+            self.insert(object, at: index)
+        } else {
+            self.append(object)
+        }
+    }
+    
     public func removeDuplicates() -> [Element] {
         var result = [Element]()
         
