@@ -28,6 +28,18 @@ extension Array {
     
 }
 
+extension Sequence where Iterator.Element == Int {
+    
+    public var strings: [String] {
+        var strings: [String] = []
+        for item in self {
+            strings.append(item.toString)
+        }
+        return strings
+    }
+    
+}
+
 
 extension Array where Element : Equatable {
     
