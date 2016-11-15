@@ -28,5 +28,25 @@ extension UIImage {
         return newI!
     }
     
+    func image(tintColor: UIColor) -> UIImage {
+        
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height);
+        
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, scale)
+        
+        draw(in: rect)
+        
+        let ctx = UIGraphicsGetCurrentContext()
+        ctx!.setBlendMode(CGBlendMode.sourceIn)
+        
+        ctx!.setFillColor(tintColor.cgColor)
+        ctx!.fill(rect)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext();
+        
+        return image!;
+    }
 
 }

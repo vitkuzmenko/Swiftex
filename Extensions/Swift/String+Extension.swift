@@ -221,7 +221,7 @@ extension String {
         return size(font: font).width
     }
     
-    public func height(width: CGFloat, withFont font: Any) -> CGFloat {
+    public func height(width: CGFloat, withFont font: UIFont) -> CGFloat {
         
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         
