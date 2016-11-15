@@ -10,12 +10,12 @@ import UIKit
 
 extension UIActivityIndicatorView {
     
-    func startAnimating(hide view: UIView) {
+    public func startAnimating(hide view: UIView) {
         self.startAnimating()
         view.isHidden = true
     }
     
-    func stopAnimating(show view: UIView) {
+    public func stopAnimating(show view: UIView) {
         self.stopAnimating()
         view.isHidden = false
     }

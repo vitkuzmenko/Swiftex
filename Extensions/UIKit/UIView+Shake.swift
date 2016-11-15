@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    func shake(_ completion: (() -> Void)? = nil) {
+    public func shake(_ completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
             self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         }, completion: { (finished) -> Void in
@@ -25,7 +25,7 @@ extension UIView {
         })
     }
     
-    func shakeHorisonal(_ complete: ((Bool) -> Void)? = nil) {
+    public func shakeHorisonal(_ complete: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: 0.05, animations: { () -> Void in
             var point = self.center
             point.x = point.x + 10

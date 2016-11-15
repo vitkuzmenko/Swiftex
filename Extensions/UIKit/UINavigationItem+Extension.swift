@@ -10,11 +10,11 @@ import UIKit
 
 extension UINavigationItem {
     
-    enum ActivityViewPosition {
+    public enum ActivityViewPosition {
         case left, title, right
     }
     
-    func startAnimating(position: ActivityViewPosition, style: UIActivityIndicatorViewStyle = .gray) {
+    public func startAnimating(position: ActivityViewPosition, style: UIActivityIndicatorViewStyle = .gray) {
         let activityView = UIActivityIndicatorView(activityIndicatorStyle: style)
         let item = UIBarButtonItem(customView: activityView)
         switch position {
@@ -31,7 +31,7 @@ extension UINavigationItem {
         activityView.startAnimating()
     }
     
-    func stopAnimating(position: ActivityViewPosition) {
+    public func stopAnimating(position: ActivityViewPosition) {
         switch position {
         case .left:
             self.leftBarButtonItem = nil
