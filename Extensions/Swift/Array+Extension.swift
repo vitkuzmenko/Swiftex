@@ -28,6 +28,18 @@ extension Array {
     
 }
 
+extension Sequence where Iterator.Element == Int {
+    
+    public var strings: [String] {
+        var strings: [String] = []
+        for item in self {
+            strings.append(item.toString)
+        }
+        return strings
+    }
+    
+}
+
 
 extension Array where Element : Equatable {
     
@@ -56,12 +68,22 @@ extension Array where Element : Equatable {
     }
     
     // Remove first collection element that is equal to the given `object`:
-    mutating public func remove(_ object: Iterator.Element) -> Int? {
+    @discardableResult mutating public func remove(_ object: Iterator.Element) -> Int? {
         if let index = self.index(of: object) {
             self.remove(at: index)
             return index
         }
         return nil
+    }
+    
+    mutating public func replace(object: Element, ifMissingInsertAt index: Int?) {
+        if let currentIndex = self.remove(object) {
+            self.insert(object, at: currentIndex)
+        } else if let index = index {
+            self.insert(object, at: index)
+        } else {
+            self.append(object)
+        }
     }
     
     public func removeDuplicates() -> [Element] {
