@@ -46,25 +46,6 @@ extension NSNumber {
         }
     }
     
-    public func wordFormat(titles: [String]) -> String {
-        let cases = [2, 0, 1, 1, 1, 2];
-        
-        let x = intValue % 100
-        if x > 4 && x < 20 {
-            return titles[2]
-        } else {
-            let y = intValue % 10
-            let minimum = min(y, 5)
-            let c = cases[minimum]
-            return titles[c]
-        }
-    }
-    
-    public func stringWithWordFormats(formats: [String], format: String) -> String {
-        let string = wordFormat(titles: formats)
-        return String(format: format, intValue, string)
-    }
-    
     public var roundDoubleValue: Double {
         return floor(100 * doubleValue) / 100
     }
