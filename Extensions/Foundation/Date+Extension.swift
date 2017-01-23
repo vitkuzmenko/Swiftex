@@ -30,7 +30,7 @@ public func >(lhs: Date, rhs: Date) -> Bool {
 
 extension Date {
     
-    public var ISO8601String: String? {
+    public var ISO8601String: String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
