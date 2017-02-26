@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Wallet One. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 extension NSObject {
     
@@ -17,7 +17,12 @@ extension NSObject {
     public var nameOfClass: String {
         return NSStringFromClass(type(of: self)).components(separatedBy: ".").last!
     }
+}
+
+#if os(iOS) || os(tvOS) || os(watchOS)
     
+extension NSObject {
+
     // MARK: - Keyboard
     
     open func addKeyboardWillShowNotification() {
@@ -90,3 +95,4 @@ extension NSObject {
     
 }
 
+#endif

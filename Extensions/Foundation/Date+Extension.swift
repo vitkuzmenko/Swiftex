@@ -57,7 +57,7 @@ extension Date {
     
     public static func date(components: DateComponents) -> Date? {
         var calendar = Calendar.current
-        calendar.timeZone = TimeZone(abbreviation: "MSK")!
+        calendar.timeZone = TimeZone(identifier: "UTC")!
         calendar.locale = Locale.current
         return calendar.date(from: components)
     }

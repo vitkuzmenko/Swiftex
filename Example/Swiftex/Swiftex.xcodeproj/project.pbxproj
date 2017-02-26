@@ -15,7 +15,6 @@
 		791D9CEB1D4F342700C9D7C2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDB1D4F342600C9D7C2 /* Data+Extension.swift */; };
 		791D9CEC1D4F342700C9D7C2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDC1D4F342600C9D7C2 /* Date+Extension.swift */; };
 		791D9CED1D4F342700C9D7C2 /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDD1D4F342600C9D7C2 /* Locale+Extension.swift */; };
-		791D9CEE1D4F342700C9D7C2 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDE1D4F342600C9D7C2 /* NotificationCenter+Extension.swift */; };
 		791D9CEF1D4F342700C9D7C2 /* NSNumber+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDF1D4F342600C9D7C2 /* NSNumber+Extension.swift */; };
 		791D9CF01D4F342700C9D7C2 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE01D4F342600C9D7C2 /* NSObject+Extension.swift */; };
 		791D9CF11D4F342700C9D7C2 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE21D4F342600C9D7C2 /* Array+Extension.swift */; };
@@ -25,6 +24,27 @@
 		791D9CF71D4F342700C9D7C2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE91D4F342700C9D7C2 /* UIColor+Extension.swift */; };
 		791D9CF81D4F342700C9D7C2 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CEA1D4F342700C9D7C2 /* UIImage+Extension.swift */; };
 		791D9CFA1D4F390200C9D7C2 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */; };
+		79312DBE1E62DC4100E73D97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79312DBD1E62DC4100E73D97 /* AppDelegate.swift */; };
+		79312DC01E62DC4100E73D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79312DBF1E62DC4100E73D97 /* Assets.xcassets */; };
+		79312DC31E62DC4100E73D97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79312DC11E62DC4100E73D97 /* MainMenu.xib */; };
+		79312DC81E62DC5F00E73D97 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDB1D4F342600C9D7C2 /* Data+Extension.swift */; };
+		79312DC91E62DC5F00E73D97 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDC1D4F342600C9D7C2 /* Date+Extension.swift */; };
+		79312DCA1E62DC5F00E73D97 /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDD1D4F342600C9D7C2 /* Locale+Extension.swift */; };
+		79312DCC1E62DC5F00E73D97 /* NSNumber+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDF1D4F342600C9D7C2 /* NSNumber+Extension.swift */; };
+		79312DCD1E62DC5F00E73D97 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE01D4F342600C9D7C2 /* NSObject+Extension.swift */; };
+		79312DCE1E62DC5F00E73D97 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */; };
+		79312DCF1E62DC5F00E73D97 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE21D4F342600C9D7C2 /* Array+Extension.swift */; };
+		79312DD01E62DC5F00E73D97 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE41D4F342700C9D7C2 /* Number+Extension.swift */; };
+		79312DD11E62DC5F00E73D97 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE51D4F342700C9D7C2 /* String+Extension.swift */; };
+		79312DD21E62DC5F00E73D97 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE71D4F342700C9D7C2 /* Functions.swift */; };
+		79312DD31E62DC5F00E73D97 /* Range+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE21D673DDF00690CFC /* Range+Extension.swift */; };
+		79312DD41E62DCDA00E73D97 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE91D4F342700C9D7C2 /* UIColor+Extension.swift */; };
+		79312DD51E62DCDA00E73D97 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CEA1D4F342700C9D7C2 /* UIImage+Extension.swift */; };
+		79312DD61E62DCDA00E73D97 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE01D673A0500690CFC /* UIViewController+Extension.swift */; };
+		79312DD71E62DCDA00E73D97 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F5155C1D867AF90079C42E /* UIWindow+Extension.swift */; };
+		79312DD81E62DCDA00E73D97 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */; };
+		79312DD91E62DCDA00E73D97 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A71DDB981200F69268 /* UIView+Shake.swift */; };
+		79312DDA1E62DCDA00E73D97 /* UIActivityIndicator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A91DDB984800F69268 /* UIActivityIndicator+Extensions.swift */; };
 		79396DE11D673A0500690CFC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE01D673A0500690CFC /* UIViewController+Extension.swift */; };
 		79396DE31D673DDF00690CFC /* Range+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE21D673DDF00690CFC /* Range+Extension.swift */; };
 		79C9D4A61DDB97EC00F69268 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */; };
@@ -45,7 +65,6 @@
 		791D9CDB1D4F342600C9D7C2 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		791D9CDC1D4F342600C9D7C2 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		791D9CDD1D4F342600C9D7C2 /* Locale+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
-		791D9CDE1D4F342600C9D7C2 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
 		791D9CDF1D4F342600C9D7C2 /* NSNumber+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+Extension.swift"; sourceTree = "<group>"; };
 		791D9CE01D4F342600C9D7C2 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		791D9CE21D4F342600C9D7C2 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
@@ -55,6 +74,11 @@
 		791D9CE91D4F342700C9D7C2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		791D9CEA1D4F342700C9D7C2 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		79312DBB1E62DC4100E73D97 /* SwiftexOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftexOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79312DBD1E62DC4100E73D97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79312DBF1E62DC4100E73D97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79312DC21E62DC4100E73D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		79312DC41E62DC4100E73D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79396DE01D673A0500690CFC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		79396DE21D673DDF00690CFC /* Range+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Extension.swift"; sourceTree = "<group>"; };
 		79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
@@ -71,6 +95,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79312DB81E62DC4100E73D97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +111,7 @@
 				790980B21D9B9B50003E3D3D /* Swiftex.podspec */,
 				791D9CC61D4F33C900C9D7C2 /* Swiftex */,
 				791D9CD91D4F342600C9D7C2 /* Extensions */,
+				79312DBC1E62DC4100E73D97 /* SwiftexOSX */,
 				791D9CC51D4F33C900C9D7C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				791D9CC41D4F33C900C9D7C2 /* Swiftex.app */,
+				79312DBB1E62DC4100E73D97 /* SwiftexOSX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,7 +155,6 @@
 				791D9CDB1D4F342600C9D7C2 /* Data+Extension.swift */,
 				791D9CDC1D4F342600C9D7C2 /* Date+Extension.swift */,
 				791D9CDD1D4F342600C9D7C2 /* Locale+Extension.swift */,
-				791D9CDE1D4F342600C9D7C2 /* NotificationCenter+Extension.swift */,
 				791D9CDF1D4F342600C9D7C2 /* NSNumber+Extension.swift */,
 				791D9CE01D4F342600C9D7C2 /* NSObject+Extension.swift */,
 				791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */,
@@ -156,6 +188,17 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		79312DBC1E62DC4100E73D97 /* SwiftexOSX */ = {
+			isa = PBXGroup;
+			children = (
+				79312DBD1E62DC4100E73D97 /* AppDelegate.swift */,
+				79312DBF1E62DC4100E73D97 /* Assets.xcassets */,
+				79312DC11E62DC4100E73D97 /* MainMenu.xib */,
+				79312DC41E62DC4100E73D97 /* Info.plist */,
+			);
+			path = SwiftexOSX;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,19 +219,40 @@
 			productReference = 791D9CC41D4F33C900C9D7C2 /* Swiftex.app */;
 			productType = "com.apple.product-type.application";
 		};
+		79312DBA1E62DC4100E73D97 /* SwiftexOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79312DC71E62DC4100E73D97 /* Build configuration list for PBXNativeTarget "SwiftexOSX" */;
+			buildPhases = (
+				79312DB71E62DC4100E73D97 /* Sources */,
+				79312DB81E62DC4100E73D97 /* Frameworks */,
+				79312DB91E62DC4100E73D97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftexOSX;
+			productName = SwiftexOSX;
+			productReference = 79312DBB1E62DC4100E73D97 /* SwiftexOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		791D9CBC1D4F33C900C9D7C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = KuzmenkoFamily;
 				TargetAttributes = {
 					791D9CC31D4F33C900C9D7C2 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
+					};
+					79312DBA1E62DC4100E73D97 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -206,6 +270,7 @@
 			projectRoot = "";
 			targets = (
 				791D9CC31D4F33C900C9D7C2 /* Swiftex */,
+				79312DBA1E62DC4100E73D97 /* SwiftexOSX */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +283,15 @@
 				791D9CD21D4F33C900C9D7C2 /* LaunchScreen.storyboard in Resources */,
 				791D9CCF1D4F33C900C9D7C2 /* Assets.xcassets in Resources */,
 				791D9CCD1D4F33C900C9D7C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79312DB91E62DC4100E73D97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79312DC01E62DC4100E73D97 /* Assets.xcassets in Resources */,
+				79312DC31E62DC4100E73D97 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,11 +318,36 @@
 				791D9CF71D4F342700C9D7C2 /* UIColor+Extension.swift in Sources */,
 				791D9CED1D4F342700C9D7C2 /* Locale+Extension.swift in Sources */,
 				791D9CF81D4F342700C9D7C2 /* UIImage+Extension.swift in Sources */,
-				791D9CEE1D4F342700C9D7C2 /* NotificationCenter+Extension.swift in Sources */,
 				791D9CC81D4F33C900C9D7C2 /* AppDelegate.swift in Sources */,
 				79C9D4AA1DDB984800F69268 /* UIActivityIndicator+Extensions.swift in Sources */,
 				791D9CF31D4F342700C9D7C2 /* Number+Extension.swift in Sources */,
 				79396DE31D673DDF00690CFC /* Range+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79312DB71E62DC4100E73D97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79312DD61E62DCDA00E73D97 /* UIViewController+Extension.swift in Sources */,
+				79312DD31E62DC5F00E73D97 /* Range+Extension.swift in Sources */,
+				79312DD81E62DCDA00E73D97 /* UINavigationItem+Extension.swift in Sources */,
+				79312DD91E62DCDA00E73D97 /* UIView+Shake.swift in Sources */,
+				79312DBE1E62DC4100E73D97 /* AppDelegate.swift in Sources */,
+				79312DD71E62DCDA00E73D97 /* UIWindow+Extension.swift in Sources */,
+				79312DD11E62DC5F00E73D97 /* String+Extension.swift in Sources */,
+				79312DCA1E62DC5F00E73D97 /* Locale+Extension.swift in Sources */,
+				79312DCF1E62DC5F00E73D97 /* Array+Extension.swift in Sources */,
+				79312DC81E62DC5F00E73D97 /* Data+Extension.swift in Sources */,
+				79312DD41E62DCDA00E73D97 /* UIColor+Extension.swift in Sources */,
+				79312DC91E62DC5F00E73D97 /* Date+Extension.swift in Sources */,
+				79312DD01E62DC5F00E73D97 /* Number+Extension.swift in Sources */,
+				79312DDA1E62DCDA00E73D97 /* UIActivityIndicator+Extensions.swift in Sources */,
+				79312DCC1E62DC5F00E73D97 /* NSNumber+Extension.swift in Sources */,
+				79312DCE1E62DC5F00E73D97 /* CGSize+Extension.swift in Sources */,
+				79312DD51E62DCDA00E73D97 /* UIImage+Extension.swift in Sources */,
+				79312DCD1E62DC5F00E73D97 /* NSObject+Extension.swift in Sources */,
+				79312DD21E62DC5F00E73D97 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +368,14 @@
 				791D9CD11D4F33C900C9D7C2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		79312DC11E62DC4100E73D97 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79312DC21E62DC4100E73D97 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -369,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Swiftex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = info.kuzmenko.Swiftex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -381,9 +489,45 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Swiftex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = info.kuzmenko.Swiftex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		79312DC51E62DC4100E73D97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftexOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = info.kuzmenko.SwiftexOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		79312DC61E62DC4100E73D97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftexOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = info.kuzmenko.SwiftexOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -408,6 +552,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		79312DC71E62DC4100E73D97 /* Build configuration list for PBXNativeTarget "SwiftexOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79312DC51E62DC4100E73D97 /* Debug */,
+				79312DC61E62DC4100E73D97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
