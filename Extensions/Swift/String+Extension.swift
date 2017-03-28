@@ -8,6 +8,11 @@
 
 
 import Foundation
+#if os(iOS) || os(tvOS) || os(watchOS)
+    import UIKit
+#elseif os(macOS)
+    import Cocoa
+#endif
 
 extension String {
 
