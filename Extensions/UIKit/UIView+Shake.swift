@@ -6,6 +6,8 @@
 //  Copyright © 2016 KuzmenkoFamily. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 import UIKit
 
 extension UIView {
@@ -40,4 +42,6 @@ extension UIView {
     }
     
 }
+
+#endif
 

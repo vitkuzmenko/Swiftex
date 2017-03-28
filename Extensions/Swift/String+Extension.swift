@@ -7,7 +7,7 @@
 //
 
 
-import UIKit
+import Foundation
 
 extension String {
 
@@ -91,6 +91,8 @@ extension String {
         }
     }
     
+    #if os(iOS) || os(tvOS) || os(watchOS)
+    
     public var decodeHTMLEntitles: String {
         
         let encodedString = self
@@ -109,6 +111,8 @@ extension String {
             return encodedString
         }
     }
+    
+    #endif
     
     public var stringByStrippingHTML: String {
         var string = self
@@ -210,6 +214,8 @@ public extension String {
 /**
  *  Calculating String Size
  */
+#if os(iOS) || os(tvOS) || os(watchOS)
+    
 extension String {
     
     public func size(font: UIFont) -> CGSize {
@@ -230,5 +236,6 @@ extension String {
         return ceil(boundingBox.height) + 1
         
     }
-    
 }
+    
+#endif

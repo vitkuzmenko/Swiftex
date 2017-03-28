@@ -6,6 +6,8 @@
 //  Copyright © 2016 KuzmenkoFamily. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 import UIKit
 
 extension UIViewController {
@@ -15,3 +17,5 @@ extension UIViewController {
     }
     
 }
+
+#endif

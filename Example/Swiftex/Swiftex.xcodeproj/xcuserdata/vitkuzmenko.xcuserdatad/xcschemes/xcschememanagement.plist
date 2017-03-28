@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SwiftexOSX.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>791D9CC31D4F33C900C9D7C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79312DBA1E62DC4100E73D97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
