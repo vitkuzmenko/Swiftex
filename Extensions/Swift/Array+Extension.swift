@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension Array {
     
@@ -36,6 +37,54 @@ extension Sequence where Iterator.Element == Int {
             strings.append(item.toString)
         }
         return strings
+    }
+    
+}
+
+extension Sequence where Iterator.Element == CGFloat {
+    
+    public var sum: Iterator.Element {
+        var _sum: Iterator.Element = 0
+        for item in self {
+            _sum += item
+        }
+        return _sum
+    }
+    
+}
+
+extension Sequence where Iterator.Element == Int {
+    
+    public var sum: Iterator.Element {
+        var _sum: Iterator.Element = 0
+        for item in self {
+            _sum += item
+        }
+        return _sum
+    }
+    
+}
+
+extension Sequence where Iterator.Element == Double {
+    
+    public var sum: Iterator.Element {
+        var _sum: Iterator.Element = 0
+        for item in self {
+            _sum += item
+        }
+        return _sum
+    }
+    
+}
+
+extension Sequence where Iterator.Element == Float {
+    
+    public var sum: Iterator.Element {
+        var _sum: Iterator.Element = 0
+        for item in self {
+            _sum += item
+        }
+        return _sum
     }
     
 }
