@@ -33,6 +33,11 @@ extension Int {
         return String(format: format, self, string)
     }
     
+    public func stringWithWordFormats(formats: [String]) -> String {
+        let format = wordFormat(titles: formats)
+        return String(format: format, self)
+    }
+    
 }
 
 extension Double {
