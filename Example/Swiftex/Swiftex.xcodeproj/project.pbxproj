@@ -47,6 +47,7 @@
 		79312DDA1E62DCDA00E73D97 /* UIActivityIndicator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A91DDB984800F69268 /* UIActivityIndicator+Extensions.swift */; };
 		79396DE11D673A0500690CFC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE01D673A0500690CFC /* UIViewController+Extension.swift */; };
 		79396DE31D673DDF00690CFC /* Range+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79396DE21D673DDF00690CFC /* Range+Extension.swift */; };
+		79B15B6D1EF7C37900C68CCB /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B15B6C1EF7C37900C68CCB /* UIAlertController+Extension.swift */; };
 		79C9D4A61DDB97EC00F69268 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */; };
 		79C9D4A81DDB981200F69268 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A71DDB981200F69268 /* UIView+Shake.swift */; };
 		79C9D4AA1DDB984800F69268 /* UIActivityIndicator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A91DDB984800F69268 /* UIActivityIndicator+Extensions.swift */; };
@@ -81,6 +82,7 @@
 		79312DC41E62DC4100E73D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79396DE01D673A0500690CFC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		79396DE21D673DDF00690CFC /* Range+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Extension.swift"; sourceTree = "<group>"; };
+		79B15B6C1EF7C37900C68CCB /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		79C9D4A71DDB981200F69268 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		79C9D4A91DDB984800F69268 /* UIActivityIndicator+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Extensions.swift"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */,
 				79C9D4A71DDB981200F69268 /* UIView+Shake.swift */,
 				79C9D4A91DDB984800F69268 /* UIActivityIndicator+Extensions.swift */,
+				79B15B6C1EF7C37900C68CCB /* UIAlertController+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				791D9CCA1D4F33C900C9D7C2 /* ViewController.swift in Sources */,
 				791D9CF71D4F342700C9D7C2 /* UIColor+Extension.swift in Sources */,
 				791D9CED1D4F342700C9D7C2 /* Locale+Extension.swift in Sources */,
+				79B15B6D1EF7C37900C68CCB /* UIAlertController+Extension.swift in Sources */,
 				791D9CF81D4F342700C9D7C2 /* UIImage+Extension.swift in Sources */,
 				791D9CC81D4F33C900C9D7C2 /* AppDelegate.swift in Sources */,
 				79C9D4AA1DDB984800F69268 /* UIActivityIndicator+Extensions.swift in Sources */,
@@ -560,6 +564,7 @@
 				79312DC61E62DC4100E73D97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
