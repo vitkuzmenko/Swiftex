@@ -29,14 +29,10 @@ extension UIView {
     
     public func shakeHorisonal(_ complete: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: 0.05, animations: { () -> Void in
-            var point = self.center
-            point.x = point.x + 10
-            self.center = point
+            self.transform = CGAffineTransform(translationX: 10, y: 0)
         }, completion: { (f) -> Void in
             UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.7, options: UIViewAnimationOptions.allowUserInteraction, animations: { () -> Void in
-                var point = self.center
-                point.x = point.x - 10
-                self.center = point
+                self.transform = .identity
             }, completion: complete)
         })
     }
