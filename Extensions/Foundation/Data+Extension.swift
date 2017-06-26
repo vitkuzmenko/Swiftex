@@ -12,9 +12,7 @@ extension Data {
     
     /// Recive string from APNS device token
     public var deviceTokenAsString: String {
-        let charSet = CharacterSet(charactersIn: "<>")
-        let string = self.description.trimmingCharacters(in: charSet)
-        return string.replacingOccurrences(of: " ", with: "")
+        return map { String(format: "%02.2hhx", $0) }.joined()
     }
     
 }
