@@ -6,6 +6,8 @@
 //  Copyright © 2017 KuzmenkoFamily. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 import UIKit
 
 extension UIAlertController {
@@ -29,3 +31,4 @@ extension UIAlertController {
     
 }
 
+#endif
