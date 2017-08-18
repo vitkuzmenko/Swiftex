@@ -70,7 +70,7 @@ extension Date {
         return Date.date(components: dateComponents)
     }
     
-    public func string(from: Date, dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
+    public func string(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
         let df = DateFormatter()
         df.dateStyle = dateStyle
         df.timeStyle = timeStyle
