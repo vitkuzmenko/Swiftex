@@ -12,7 +12,7 @@ import UIKit
 
 extension UIView {
     
-    public func shake(_ completion: (() -> Void)? = nil) {
+    public func shake(scale: CGFloat = 0.8, _ completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
             self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         }, completion: { (finished) -> Void in
