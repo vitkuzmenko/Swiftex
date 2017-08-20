@@ -14,7 +14,7 @@ extension UIView {
     
     public func shake(scale: CGFloat = 0.8, _ completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
-            self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            self.transform = CGAffineTransform(scaleX: scale, y: scale)
         }, completion: { (finished) -> Void in
             delay(0.3, closure: { () -> Void in
                 completion?()
