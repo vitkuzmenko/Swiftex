@@ -89,11 +89,7 @@ extension String {
     }
     
     public func lastCharacters(count: Int) -> String {
-        if count >= self.length {
-            return self
-        } else {
-            return self.substring(from: self.characters.index(self.endIndex, offsetBy: -count))
-        }
+        return String(self.suffix(count))
     }
     
     #if os(iOS) || os(tvOS) || os(watchOS)
@@ -103,9 +99,10 @@ extension String {
         let encodedString = self
         
         let encodedData = encodedString.data(using: String.Encoding.utf8)!
-        let attributedOptions : [String: Any] = [
-            NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType as Any,
-            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8 as Any
+        
+        let attributedOptions : [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8
         ]
         
         do {
@@ -166,35 +163,12 @@ extension String {
     }
     
     public func truncate(length: Int, trailing: String? = nil) -> String {
-        if self.characters.count > length {
-            return self.substring(to: self.characters.index(self.startIndex, offsetBy: length)).trim + (trailing ?? "")
-        } else {
-            return self
-        }
+        return String(prefix(length)).trim + (trailing ?? "")
     }
     
     public var notificaitonName: NSNotification.Name {
         return NSNotification.Name(rawValue: self)
     }
-    
-}
-
-// MARK: - Subcript
-
-extension String {
-    
-    public subscript (i: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: i)]
-    }
-    
-    public subscript (i: Int) -> String {
-        return String(self[i] as Character)
-    }
-    
-    public subscript (r: Range<Int>) -> String {
-        return substring(with: characters.index(startIndex, offsetBy: r.lowerBound)..<characters.index(startIndex, offsetBy: r.upperBound))
-    }
-    
 }
 
 extension String {
@@ -225,7 +199,7 @@ extension String {
     
     public func size(font: UIFont) -> CGSize {
         let originalString = self as NSString
-        return originalString.size(attributes: [NSFontAttributeName: font])
+        return originalString.size(withAttributes: [NSAttributedStringKey.font: font])
     }
     
     public func width(font: UIFont) -> CGFloat {
@@ -236,7 +210,7 @@ extension String {
         
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         
-        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         
         return ceil(boundingBox.height) + 1
         

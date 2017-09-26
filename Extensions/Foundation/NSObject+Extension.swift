@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 Wallet One. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+import UIKit
+#else
 import Foundation
+#endif
 
 extension NSObject {
     
@@ -21,7 +25,7 @@ extension NSObject {
 
 #if os(iOS) || os(tvOS) || os(watchOS)
     
-extension NSObject {
+@objc extension NSObject {
 
     // MARK: - Keyboard
     
