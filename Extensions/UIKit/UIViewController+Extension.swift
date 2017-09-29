@@ -12,10 +12,6 @@ import UIKit
 
 extension UIViewController {
     
-    open var navigationBar: UINavigationBar? {
-        return navigationController?.navigationBar
-    }
-    
 }
 
 #endif
