@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 KuzmenkoFamily. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(watchOS)
 
 import UIKit
 

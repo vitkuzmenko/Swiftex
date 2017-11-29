@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Wallet One. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(watchOS)
 
 import UIKit
 

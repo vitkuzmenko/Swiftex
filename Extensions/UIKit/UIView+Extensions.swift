@@ -6,11 +6,16 @@
 //  Copyright © 2016 KuzmenkoFamily. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(watchOS)
 
 import UIKit
 
 extension UIView {
+    
+    @IBInspectable public var cornerRadius: CGFloat {
+        get { return layer.cornerRadius }
+        set { layer.cornerRadius = newValue }
+    }
     
     public func shake(scale: CGFloat = 0.8, _ completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
