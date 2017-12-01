@@ -12,6 +12,11 @@ import UIKit
 
 extension UIViewController {
     
+    func set(popoverSourceView: UIView) {
+        popoverPresentationController?.sourceView = popoverSourceView.superview
+        popoverPresentationController?.sourceRect = popoverSourceView.frame
+    }
+    
 }
 
 #endif
