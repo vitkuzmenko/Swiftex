@@ -12,9 +12,17 @@ import UIKit
 
 extension UIViewController {
     
-    func set(popoverSourceView: UIView) {
+    public func set(popoverSourceView: UIView) {
         popoverPresentationController?.sourceView = popoverSourceView.superview
         popoverPresentationController?.sourceRect = popoverSourceView.frame
+    }
+    
+    public var safeAreaInsets: UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return view.safeAreaInsets
+        } else {
+            return UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: bottomLayoutGuide.length, right: 0)
+        }
     }
     
 }
