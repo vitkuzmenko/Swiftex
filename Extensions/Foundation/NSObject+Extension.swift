@@ -23,7 +23,7 @@ extension NSObject {
     }
 }
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(watchOS)
     
 @objc extension NSObject {
 
