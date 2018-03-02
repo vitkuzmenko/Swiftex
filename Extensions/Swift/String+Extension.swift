@@ -144,22 +144,22 @@ extension String {
             let pattern = "<a\\b.*?<\\/a>"
             let reg = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
             let result = reg.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "")
-            return result.length > 0 ? result : nil
+            return result.count > 0 ? result : nil
         } catch _ {
             return self
         }
     }
     
     public var first: String {
-        return String(characters.prefix(1))
+        return String(prefix(1))
     }
     
     public var last: String {
-        return String(characters.suffix(1))
+        return String(suffix(1))
     }
     
     public var uppercaseFirst: String {
-        return first.uppercased() + String(characters.dropFirst())
+        return first.uppercased() + String(dropFirst())
     }
     
     public func truncate(length: Int, trailing: String? = nil) -> String {
