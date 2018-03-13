@@ -189,18 +189,19 @@ public extension String {
         return nil
     }
     
-    public func matches(for regex: String) -> [String] {
-        
+    public func matches(for regex: String) -> [[String]] {
         do {
-            let regex = try NSRegularExpression(pattern: regex)
-            let results = regex.matches(in: self, range: NSRange(self.startIndex..., in: self))
-            return results.map {
-                String(self[Range($0.range, in: self)!])
+            let regEx = try NSRegularExpression(pattern: regex, options: [])
+            let matches = regEx.matches(in: self, range: NSRange(location: 0, length: self.count))
+            return matches.map {
+                var array: [String] = []
+                for rangeIndex in 0...max(0, $0.numberOfRanges - 1) {
+                    array.append(String(self[Range($0.range(at: rangeIndex), in: self)!]))
+                }
+                return array
             }
-        } catch let error {
-            print("invalid regex: \(error.localizedDescription)")
-            return []
-        }
+        } catch _ { }
+        return []
     }
     
 }
