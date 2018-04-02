@@ -18,25 +18,6 @@ print(array.second) // Optional("Hi")
 print(array.third) // Optional("Hello")
 ```
 
-Check for has Equatable object
-
-```swift
-let array = ["Say", "Hi", "Hello"]
-if array.has("Hi") {
-	// Array has "Hi"
-}
-```
-
-Check for has non-Equatable object
-
-```swift
-let array = [say, hi, hello]
-let need = 5
-if array.has({ $0.prop == need }) {
-	// Array has Hello object with prop 5
-}
-```
-
 Move objects from index to index
 
 ```swift
