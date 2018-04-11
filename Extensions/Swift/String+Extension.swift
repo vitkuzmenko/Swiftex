@@ -196,11 +196,7 @@ public extension String {
             return matches.map {
                 var array: [String] = []
                 for rangeIndex in 0...max(0, $0.numberOfRanges - 1) {
-                    #if os(iOS) || os(watchOS) || os(tvOS)
                     array.append(String(self[Range($0.range(at: rangeIndex), in: self)!]))
-                    #elseif os(macOS)
-                    array.append(String(self[Range($0.rangeAt(rangeIndex), in: self)!]))
-                    #endif
                 }
                 return array
             }

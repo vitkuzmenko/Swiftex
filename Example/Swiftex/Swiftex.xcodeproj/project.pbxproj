@@ -70,6 +70,7 @@
 		793E13C12049672200AAA5CA /* NSNumber+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CDF1D4F342600C9D7C2 /* NSNumber+Extension.swift */; };
 		793E13C22049672200AAA5CA /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CE01D4F342600C9D7C2 /* NSObject+Extension.swift */; };
 		793E13C32049672200AAA5CA /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D9CF91D4F390200C9D7C2 /* CGSize+Extension.swift */; };
+		79A74F1B207E0D3200BA59D6 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B15B6C1EF7C37900C68CCB /* UIAlertController+Extension.swift */; };
 		79B15B6D1EF7C37900C68CCB /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B15B6C1EF7C37900C68CCB /* UIAlertController+Extension.swift */; };
 		79C9D4A61DDB97EC00F69268 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */; };
 		79C9D4A81DDB981200F69268 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A71DDB981200F69268 /* UIView+Extensions.swift */; };
@@ -420,6 +421,7 @@
 				79312DD91E62DCDA00E73D97 /* UIView+Extensions.swift in Sources */,
 				79312DBE1E62DC4100E73D97 /* AppDelegate.swift in Sources */,
 				79312DD71E62DCDA00E73D97 /* UIWindow+Extension.swift in Sources */,
+				79A74F1B207E0D3200BA59D6 /* UIAlertController+Extension.swift in Sources */,
 				79312DD11E62DC5F00E73D97 /* String+Extension.swift in Sources */,
 				79312DCA1E62DC5F00E73D97 /* Locale+Extension.swift in Sources */,
 				79312DCF1E62DC5F00E73D97 /* Array+Extension.swift in Sources */,
@@ -652,7 +654,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -669,7 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = info.kuzmenko.SwiftexOSX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
