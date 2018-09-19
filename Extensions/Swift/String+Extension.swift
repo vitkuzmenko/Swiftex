@@ -215,7 +215,7 @@ extension String {
     
     public func size(font: UIFont) -> CGSize {
         let originalString = self as NSString
-        return originalString.size(withAttributes: [NSAttributedStringKey.font: font])
+        return originalString.size(withAttributes: [NSAttributedString.Key.font: font])
     }
     
     public func width(font: UIFont) -> CGFloat {
@@ -226,7 +226,7 @@ extension String {
         
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         
-        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
         return ceil(boundingBox.height) + 1
         

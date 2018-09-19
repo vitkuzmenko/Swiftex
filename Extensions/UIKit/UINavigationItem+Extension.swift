@@ -16,8 +16,8 @@ extension UINavigationItem {
         case left, title, right
     }
     
-    public func startAnimating(position: ActivityViewPosition, style: UIActivityIndicatorViewStyle = .gray) {
-        let activityView = UIActivityIndicatorView(activityIndicatorStyle: style)
+    public func startAnimating(position: ActivityViewPosition, style: UIActivityIndicatorView.Style = .gray) {
+        let activityView = UIActivityIndicatorView(style: style)
         let item = UIBarButtonItem(customView: activityView)
         switch position {
         case .left:
