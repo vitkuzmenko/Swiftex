@@ -24,7 +24,7 @@ extension UIImage {
         newImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
-        let data = UIImageJPEGRepresentation(newImage, 0.9)
+        let data = newImage.jpegData(compressionQuality: 0.9)
         let newI = UIImage(data: data!, scale: UIScreen.main.scale)
         
         return newI!
