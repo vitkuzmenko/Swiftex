@@ -55,21 +55,6 @@ extension Date {
         return selfComps.month == dateComps.month && selfComps.year == dateComps.year && selfComps.day == dateComps.day
     }
     
-    public static func date(components: DateComponents) -> Date? {
-        var calendar = Calendar.current
-        calendar.timeZone = TimeZone(identifier: "UTC")!
-        calendar.locale = Locale.current
-        return calendar.date(from: components)
-    }
-    
-    public static func date(date: Date, hour: Int) -> Date? {
-        let calendar = Calendar.current
-        var dateComponents = (calendar as NSCalendar).components([.year, .month, .day], from: date)
-        dateComponents.hour = hour
-        dateComponents.minute = 0
-        return Date.date(components: dateComponents)
-    }
-    
     public func string(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
         let df = DateFormatter()
         df.dateStyle = dateStyle
@@ -78,4 +63,3 @@ extension Date {
     }
     
 }
-
