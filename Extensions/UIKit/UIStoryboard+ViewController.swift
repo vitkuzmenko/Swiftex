@@ -6,9 +6,9 @@
 //  Copyright © 2018 Faceter.io. All rights reserved.
 //
 
-import UIKit
-
 #if os(iOS) || os(watchOS) || os(tvOS)
+
+import UIKit
 
 public protocol StoryboardIdentifiable {
     static var storyboardIdentifier: String { get }

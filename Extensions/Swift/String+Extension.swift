@@ -122,6 +122,8 @@ public extension String {
     
 }
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 extension String {
  
     func getAttributedStringFromHtml(font: UIFont, color: UIColor) -> NSAttributedString? {
@@ -152,11 +154,6 @@ extension String {
     }
     
 }
-
-/**
- *  Calculating String Size
- */
-#if os(iOS) || os(tvOS) || os(watchOS)
     
 extension String {
     
