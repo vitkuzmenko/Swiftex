@@ -10,6 +10,10 @@
 
 import UIKit
 
+fileprivate func delay(_ delay: TimeInterval, closure:@escaping () -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+}
+
 extension UIView {
     
     @IBInspectable public var cornerRadius: CGFloat {
@@ -17,7 +21,7 @@ extension UIView {
         set { layer.cornerRadius = newValue }
     }
     
-    public func shake(scale: CGFloat = 0.8, _ completion: (() -> Void)? = nil) {
+    public func shakeZ(scale: CGFloat = 0.8, _ completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
             self.transform = CGAffineTransform(scaleX: scale, y: scale)
         }, completion: { (finished) -> Void in
@@ -32,7 +36,7 @@ extension UIView {
         })
     }
     
-    public func shakeHorisonal(_ complete: ((Bool) -> Void)? = nil) {
+    public func shakeX(_ complete: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: 0.05, animations: { () -> Void in
             self.transform = CGAffineTransform(translationX: 10, y: 0)
         }, completion: { (f) -> Void in
@@ -43,5 +47,17 @@ extension UIView {
     }
     
 }
+
+public protocol UIViewNibLoadable: class {
+    static func loadFromNib() -> Self?
+}
+
+extension UIViewNibLoadable where Self: UIView  {
+    public static func loadFromNib() -> Self? {
+        return Bundle.main.loadNibNamed(Self.nameOfClass, owner: nil, options: nil)?.first as? Self
+    }
+}
+
+extension UIView: UIViewNibLoadable { }
 
 #endif

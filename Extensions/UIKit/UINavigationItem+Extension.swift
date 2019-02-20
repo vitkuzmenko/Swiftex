@@ -33,16 +33,16 @@ extension UINavigationItem {
         activityView.startAnimating()
     }
     
-    public func stopAnimating(position: ActivityViewPosition) {
+    public func stopAnimating(position: ActivityViewPosition, item: UIBarButtonItem? = nil) {
         switch position {
         case .left:
-            self.leftBarButtonItem = nil
+            self.leftBarButtonItem = item
             break
         case .title:
             self.titleView = nil
             break
         case .right:
-            self.rightBarButtonItem = nil
+            self.rightBarButtonItem = item
             break
         }
     }
