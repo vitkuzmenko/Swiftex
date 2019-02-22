@@ -6,7 +6,7 @@
 //  Copyright © 2016 KuzmenkoFamily. All rights reserved.
 //
 
-//#if os(iOS) || os(watchOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
 
 import UIKit
 
@@ -25,7 +25,6 @@ extension UIViewController {
             return UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: bottomLayoutGuide.length, right: 0)
         }
         #elseif os(tvOS)
-        
         if #available(tvOS 11.0, *) {
             return view.safeAreaInsets
         } else {
@@ -36,5 +35,5 @@ extension UIViewController {
     
 }
 
-//#endif
+#endif
 

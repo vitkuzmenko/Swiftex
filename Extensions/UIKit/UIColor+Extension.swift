@@ -6,7 +6,7 @@
 //  Copyright (c) 2015. All rights reserved.
 //
 
-// #if os(iOS) || os(watchOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
 
 import UIKit
 
@@ -23,4 +23,4 @@ extension UIColor {
     
 }
 
-// #endif
+ #endif

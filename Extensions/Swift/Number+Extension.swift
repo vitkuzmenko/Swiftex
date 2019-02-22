@@ -11,7 +11,7 @@ import Foundation
 extension Int {
     
     public var toString: String {
-        return String(stringInterpolationSegment: self)
+        return String(self)
     }
     
     public func wordFormat(titles: [String]) -> String {
@@ -45,15 +45,7 @@ extension Double {
     public var toString: String {
         return String(stringInterpolationSegment: self)
     }
-    
-    public func humanReadableString(showDots: Bool) -> String {
-        let interval = Int(self)
-        let seconds = interval % 60
-        let minutes = (interval / 60) % 60
-        return String(format: "%02d%@%02d", minutes, showDots ? ":" : " ", seconds)
-    }
-    
-    
+        
 }
 
 extension Float {

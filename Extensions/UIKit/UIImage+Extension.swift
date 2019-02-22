@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 KuzmenkoFamily. All rights reserved.
 //
 
-//#if os(iOS) || os(watchOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
 
 import UIKit
 
@@ -53,5 +53,5 @@ extension UIImage {
 
 }
 
-// #endif
+ #endif
 

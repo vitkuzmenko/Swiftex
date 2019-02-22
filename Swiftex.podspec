@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Swiftex"
-  s.version      = "0.2.1"
+  s.version      = "0.2.5"
   s.summary      = "Swift extensions"
 
   s.homepage     = "https://github.com/vitkuzmenko/Swiftex.git"
@@ -10,6 +10,8 @@ Pod::Spec.new do |s|
 
   s.author             = { "Vitaliy" => "kuzmenko.v.u@gmail.com" }
   s.social_media_url   = "http://twitter.com/vitkuzmenko"
+
+  s.swift_version = '4.2'
 
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
