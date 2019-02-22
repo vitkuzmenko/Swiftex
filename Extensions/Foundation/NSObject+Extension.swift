@@ -46,13 +46,13 @@ extension NSObject {
     }
     
     open func addKeyboardWillUpdateNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillUpdate(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillUpdate(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        addKeyboardWillShowNotification()
+        addKeyboardWillHideNotification()
     }
     
     open func addKeyboardDidUpdateNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidUpdate(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidUpdate(notification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+        addKeyboardDidShowNotification()
+        addKeyboardDidHideNotification()
     }
     
     open func removeKeyboardWillShowNotification() {
@@ -74,31 +74,25 @@ extension NSObject {
     open func keyboardDidShow(notification: Notification) {
         guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         keyboardDidShow(frame: value.cgRectValue)
+        keyboardDidUpdate(frame: value.cgRectValue)
     }
     
     open func keyboardWillShow(notification: Notification) {
         guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         keyboardWillShow(frame: value.cgRectValue)
+        keyboardWillUpdate(frame: value.cgRectValue)
     }
     
     open func keyboardWillHide(notification: Notification) {
         guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         keyboardWillHide(frame: value.cgRectValue)
+        keyboardWillUpdate(frame: .zero)
     }
     
     open func keyboardDidHide(notification: Notification) {
         guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         keyboardDidHide(frame: value.cgRectValue)
-    }
-    
-    open func keyboardWillUpdate(notification: Notification) {
-        guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        keyboardWillUpdate(frame: value.cgRectValue)
-    }
-    
-    open func keyboardDidUpdate(notification: Notification) {
-        guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        keyboardWillUpdate(frame: value.cgRectValue)
+        keyboardDidUpdate(frame: .zero)
     }
     
     open func keyboardWillShow(frame: CGRect) {
