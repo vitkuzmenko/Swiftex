@@ -1,9 +1,9 @@
 //
 //  NSObject+Extension.swift
-//  Wallet One
+//
 //
 //  Created by Vitaliy Kuzmenko on 14/04/15.
-//  Copyright (c) 2015 Wallet One. All rights reserved.
+//  Copyright (c) 2015. All rights reserved.
 //
 
 #if os(iOS) || os(tvOS) || os(watchOS)
@@ -45,6 +45,16 @@ extension NSObject {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(notification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
     }
     
+    open func addKeyboardWillUpdateNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillUpdate(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillUpdate(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    open func addKeyboardDidUpdateNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidUpdate(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidUpdate(notification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
     open func removeKeyboardWillShowNotification() {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
@@ -81,6 +91,16 @@ extension NSObject {
         keyboardDidHide(frame: value.cgRectValue)
     }
     
+    open func keyboardWillUpdate(notification: Notification) {
+        guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        keyboardWillUpdate(frame: value.cgRectValue)
+    }
+    
+    open func keyboardDidUpdate(notification: Notification) {
+        guard let nInfo = notification.userInfo as? [String: Any], let value = nInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        keyboardWillUpdate(frame: value.cgRectValue)
+    }
+    
     open func keyboardWillShow(frame: CGRect) {
         
     }
@@ -94,6 +114,14 @@ extension NSObject {
     }
     
     open func keyboardDidHide(frame: CGRect) {
+        
+    }
+    
+    open func keyboardWillUpdate(frame: CGRect) {
+        
+    }
+    
+    open func keyboardDidUpdate(frame: CGRect) {
         
     }
     
