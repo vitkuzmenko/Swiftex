@@ -94,7 +94,7 @@ extension String {
     
 }
 
-public extension String {
+extension String {
     
     public func enumCase<T: RawRepresentable>() -> T? {
         if let raw = self as? T.RawValue {
@@ -117,8 +117,6 @@ public extension String {
         } catch _ { }
         return []
     }
-    
-    
     
 }
 
