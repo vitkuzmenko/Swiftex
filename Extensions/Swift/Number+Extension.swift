@@ -43,7 +43,7 @@ extension Int {
 extension Double {
 
     public var toString: String {
-        return String(stringInterpolationSegment: self)
+        return String(self)
     }
         
 }
@@ -51,7 +51,7 @@ extension Double {
 extension Float {
     
     public var toString: String {
-        return String(stringInterpolationSegment: self)
+        return String(self)
     }
     
 }
@@ -59,7 +59,7 @@ extension Float {
 extension Decimal {
     
     public var toString: String {
-        return String(stringInterpolationSegment: self)
+        return NSDecimalNumber(decimal: self).stringValue
     }
     
 }
