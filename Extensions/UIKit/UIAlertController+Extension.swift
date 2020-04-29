@@ -12,21 +12,27 @@ import UIKit
 
 extension UIAlertController {
     
-    public func addAction(title: String, style: UIAlertAction.Style = .default, enabled: Bool = true, handler: ((UIAlertAction) -> Void)?) {
+    @discardableResult
+    public func addAction(title: String, style: UIAlertAction.Style = .default, enabled: Bool = true, handler: ((UIAlertAction) -> Void)?) -> UIAlertAction {
         let action = UIAlertAction(title: title, style: style, handler: handler)
         if enabled {
             self.addAction(action)
         }
+        return action
     }
     
-    public func addCancel(_ handler: ((UIAlertAction) -> Void)? = nil) {
+    @discardableResult
+    public func addCancel(_ handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
         let action = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: handler)
         self.addAction(action)
+        return action
     }
     
-    public func addDismiss(_ handler: ((UIAlertAction) -> Void)? = nil) {
+    @discardableResult
+    public func addDismiss(_ handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
         let action = UIAlertAction(title: NSLocalizedString("Dismiss", comment: ""), style: .cancel, handler: handler)
         self.addAction(action)
+        return action
     }
     
 }
