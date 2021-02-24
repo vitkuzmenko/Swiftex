@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Swiftex"
-  s.version      = "0.2.10"
+  s.version      = "0.2.11"
   s.summary      = "Swift extensions"
 
   s.homepage     = "https://github.com/vitkuzmenko/Swiftex.git"
