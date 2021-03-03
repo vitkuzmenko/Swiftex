@@ -21,14 +21,14 @@ extension Sequence where Iterator.Element == Int {
     
 }
 
+// MARK: - Sum
+
 extension Sequence where Iterator.Element == CGFloat {
     
     public var sum: Iterator.Element {
-        var _sum: Iterator.Element = 0
-        for item in self {
-            _sum += item
+        reduce(0) { (res, val) -> Iterator.Element in
+            res + val
         }
-        return _sum
     }
     
 }
@@ -36,11 +36,9 @@ extension Sequence where Iterator.Element == CGFloat {
 extension Sequence where Iterator.Element == Int {
     
     public var sum: Iterator.Element {
-        var _sum: Iterator.Element = 0
-        for item in self {
-            _sum += item
+        reduce(0) { (res, val) -> Iterator.Element in
+            res + val
         }
-        return _sum
     }
     
 }
@@ -48,11 +46,9 @@ extension Sequence where Iterator.Element == Int {
 extension Sequence where Iterator.Element == Double {
     
     public var sum: Iterator.Element {
-        var _sum: Iterator.Element = 0
-        for item in self {
-            _sum += item
+        reduce(0) { (res, val) -> Iterator.Element in
+            res + val
         }
-        return _sum
     }
     
 }
@@ -60,15 +56,56 @@ extension Sequence where Iterator.Element == Double {
 extension Sequence where Iterator.Element == Float {
     
     public var sum: Iterator.Element {
-        var _sum: Iterator.Element = 0
-        for item in self {
-            _sum += item
+        reduce(0) { (res, val) -> Iterator.Element in
+            res + val
         }
-        return _sum
     }
     
 }
 
+// MARK: - Subtract
+
+extension Sequence where Iterator.Element == CGFloat {
+    
+    public func subtract(_ start: Iterator.Element) -> Iterator.Element {
+        reduce(start) { (res, val) -> Iterator.Element in
+            res - val
+        }
+    }
+    
+}
+
+extension Sequence where Iterator.Element == Int {
+    
+    public func subtract(_ start: Iterator.Element) -> Iterator.Element {
+        reduce(start) { (res, val) -> Iterator.Element in
+            res - val
+        }
+    }
+    
+}
+
+extension Sequence where Iterator.Element == Double {
+    
+    public func subtract(_ start: Iterator.Element) -> Iterator.Element {
+        reduce(start) { (res, val) -> Iterator.Element in
+            res - val
+        }
+    }
+    
+}
+
+extension Sequence where Iterator.Element == Float {
+    
+    public func subtract(_ start: Iterator.Element) -> Iterator.Element {
+        reduce(start) { (res, val) -> Iterator.Element in
+            res - val
+        }
+    }
+    
+}
+
+// MARK: - Move
 
 extension Array where Element : Equatable {
     
