@@ -73,6 +73,9 @@
 		79C9D4A61DDB97EC00F69268 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */; };
 		79C9D4A81DDB981200F69268 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A71DDB981200F69268 /* UIView+Extensions.swift */; };
 		79C9D4AA1DDB984800F69268 /* UIActivityIndicator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9D4A91DDB984800F69268 /* UIActivityIndicator+Extensions.swift */; };
+		79F3AB4A264D57AF006CBCE0 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F3AB49264D57AF006CBCE0 /* Actions.swift */; };
+		79F3AB4B264D57AF006CBCE0 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F3AB49264D57AF006CBCE0 /* Actions.swift */; };
+		79F3AB4C264D57AF006CBCE0 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F3AB49264D57AF006CBCE0 /* Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +116,7 @@
 		79C9D4A51DDB97EC00F69268 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		79C9D4A71DDB981200F69268 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		79C9D4A91DDB984800F69268 /* UIActivityIndicator+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Extensions.swift"; sourceTree = "<group>"; };
+		79F3AB49264D57AF006CBCE0 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,7 @@
 				791D9CE41D4F342700C9D7C2 /* Number+Extension.swift */,
 				791D9CE51D4F342700C9D7C2 /* String+Extension.swift */,
 				79396DE21D673DDF00690CFC /* Range+Extension.swift */,
+				79F3AB49264D57AF006CBCE0 /* Actions.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				791D9CEF1D4F342700C9D7C2 /* NSNumber+Extension.swift in Sources */,
 				79396DE11D673A0500690CFC /* UIViewController+Extension.swift in Sources */,
 				79C9D4A81DDB981200F69268 /* UIView+Extensions.swift in Sources */,
+				79F3AB4A264D57AF006CBCE0 /* Actions.swift in Sources */,
 				791D9CF11D4F342700C9D7C2 /* Array+Extension.swift in Sources */,
 				794D2E5C221DA1B5000D6FFD /* UIStoryboard+ViewController.swift in Sources */,
 				791D9CF41D4F342700C9D7C2 /* String+Extension.swift in Sources */,
@@ -417,6 +423,7 @@
 				79312DD81E62DCDA00E73D97 /* UINavigationItem+Extension.swift in Sources */,
 				79312DD91E62DCDA00E73D97 /* UIView+Extensions.swift in Sources */,
 				79312DBE1E62DC4100E73D97 /* AppDelegate.swift in Sources */,
+				79F3AB4B264D57AF006CBCE0 /* Actions.swift in Sources */,
 				79A74F1B207E0D3200BA59D6 /* UIAlertController+Extension.swift in Sources */,
 				79312DD11E62DC5F00E73D97 /* String+Extension.swift in Sources */,
 				79312DCA1E62DC5F00E73D97 /* Locale+Extension.swift in Sources */,
@@ -444,6 +451,7 @@
 				793E13BE2049672200AAA5CA /* Data+Extension.swift in Sources */,
 				793E13B12049671B00AAA5CA /* UIColor+Extension.swift in Sources */,
 				793E13A72049671100AAA5CA /* ViewController.swift in Sources */,
+				79F3AB4C264D57AF006CBCE0 /* Actions.swift in Sources */,
 				793E13B92049671F00AAA5CA /* Array+Extension.swift in Sources */,
 				794D2E5E221DA1B5000D6FFD /* UIStoryboard+ViewController.swift in Sources */,
 				793E13B72049671B00AAA5CA /* UIActivityIndicator+Extensions.swift in Sources */,
