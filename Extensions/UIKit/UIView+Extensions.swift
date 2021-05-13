@@ -48,7 +48,7 @@ extension UIView {
     
 }
 
-public protocol UIViewNibLoadable: class {
+public protocol UIViewNibLoadable: AnyObject {
     static func loadFromNib() -> Self?
 }
 
