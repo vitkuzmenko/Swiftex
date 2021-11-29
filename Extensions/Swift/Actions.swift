@@ -37,8 +37,8 @@ extension URL {
     public typealias OptionalAction = (Self?) -> Void
 }
 extension Error {
-    public typealias Action = (Self) -> Void
-    public typealias OptionalAction = (Self?) -> Void
+    public typealias Action = (Error) -> Void
+    public typealias OptionalAction = (Error?) -> Void
 }
 
 #if os(iOS) || os(watchOS) || os(tvOS)
