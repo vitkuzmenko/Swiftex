@@ -12,14 +12,38 @@ import UIKit
 #endif
 
 public typealias VoidAction = () -> Void
-extension String { public typealias Action = (Self) -> Void }
-extension Int { public typealias Action = (Self) -> Void }
-extension Bool { public typealias Action = (Self) -> Void }
-extension Float { public typealias Action = (Self) -> Void }
-extension Double { public typealias Action = (Self) -> Void }
-extension URL { public typealias Action = (Self) -> Void }
-extension Error { public typealias Action = (Self) -> Void }
+extension String {
+    public typealias Action = (Self) -> Void
+    public typealias OptionalAction = (Self?) -> Void
+}
+extension Int {
+    public typealias Action = (Self) -> Void
+    public typealias OptionalAction = (Self?) -> Void
+}
+extension Bool {
+    public typealias Action = (Self) -> Void
+    public typealias OptionalAction = (Self?) -> Void
+}
+extension Float {
+    public typealias Action = (Self) -> Void
+    public typealias OptionalAction = (Self?) -> Void
+}
+extension Double {
+    public typealias Action = (Self) -> Void
+    public typealias OptionalAction = (Self?) -> Void
+}
+extension URL {
+    public typealias Action = (Self) -> Void
+    public typealias OptionalAction = (Self?) -> Void
+}
+extension Error {
+    public typealias Action = (Self) -> Void
+    public typealias OptionalAction = (Self?) -> Void
+}
 
 #if os(iOS) || os(watchOS) || os(tvOS)
-extension UIView { public typealias Action = (UIView) -> Void }
+extension UIView {
+    public typealias Action = (UIView) -> Void
+    public typealias OptionalAction = (UIView?) -> Void
+}
 #endif
