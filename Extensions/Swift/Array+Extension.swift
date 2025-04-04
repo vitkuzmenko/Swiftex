@@ -144,4 +144,17 @@ extension Array where Element : Equatable {
         return result
     }
     
+    public func removingDuplicates<T: Equatable>(by keyPath: KeyPath<Element, T>) -> [Element] {
+        var seen = [T]()
+        return filter { element in
+            let value = element[keyPath: keyPath]
+            if seen.contains(value) {
+                return false
+            } else {
+                seen.append(value)
+                return true
+            }
+        }
+    }
+    
 }
